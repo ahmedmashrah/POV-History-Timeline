@@ -1,0 +1,274 @@
+// Bootstrap Button Variant
+
+@mixin button-variant($color, $background, $border) {
+	color: $color;
+	background-color: $background;
+	border-color: $border;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	.open .dropdown-toggle {
+		color: $color;
+		background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+	}
+	&:active,
+	&.active,
+	.open .dropdown-toggle {
+		background-image: none;
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			background-color: $background;
+			border-color: $border;
+		}
+	}
+
+	.badge {
+		color: $background;
+		background-color: $color;
+	}
+}
+
+// breakpoints
+
+$xs: 767px;
+$sm: 768px;   
+$md: 992px;     
+$lg: 1200px;     
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == xs {
+   @media (max-width: $xs) { @content; } 
+  }
+  @else if $canvas == sm {
+   @media (min-width: $sm) { @content; } 
+  }
+  @else if $canvas == md {
+   @media only screen and (min-width: $md) { @content; } 
+  }
+  @else if $canvas == lg {
+   @media only screen and (min-width: $lg) { @content; } 
+  }
+}
+
+// shadows
+
+@mixin shadow($z, $type){
+	@if $z == 0 {
+		#{$type}-shadow: none;
+	}
+	@else if $z == 1 {
+		#{$type}-shadow: 0 1px 6px rgba(0,0,0,.12),0 1px 6px rgba(0,0,0,.12);
+	}
+	@else if $z == 2 {
+		#{$type}-shadow: 0 3px 10px rgba(0,0,0,.23),0 3px 10px rgba(0,0,0,.16);
+	}
+	@else if $z == 3 {
+		#{$type}-shadow: 0 6px 10px rgba(0,0,0,.23),0 10px 30px rgba(0,0,0,.19);
+	}
+	@else if $z == 4 {
+		#{$type}-shadow: 0 10px 18px rgba(0,0,0,.22),0 14px 45px rgba(0,0,0,.25);
+	}
+	@else if $z == 5 {
+		#{$type}-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+	}
+}
+
+// 
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+// border radius
+
+@mixin border-radius($radius:.25em) {
+  border-radius: $radius;
+}
+
+
+// Font Selections
+
+@mixin vertical-line($color){
+	&::before {
+		content: '';
+		position: absolute;
+		left: 32px;
+		top: 0px;
+		height: 100%;
+		width: 4px;
+		background-color: darken($color, 20%);
+		z-index: 1;
+	}
+
+	@include MQ(md){
+		&::before{
+			left: 50%;
+			margin-left: (-4px/2);
+		}
+	}
+}
+
+@mixin serif-font() {
+	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin script-font() {
+	font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+}
+
+@mixin body-font() {
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin heading-font() {
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+@mixin css3($property, $value){
+  -webkit-#{$property}: $value;
+     -moz-#{$property}: $value;
+      -ms-#{$property}: $value;
+       -o-#{$property}: $value;
+          #{$property}: $value;
+}
+
+
+@mixin transition($value){
+	@include css3(transition, $value);
+}
+
+@mixin background-cover() {
+	@include css3(background-size, cover);
+}
+
+
+/* Flex START */
+@mixin flex(){
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+@mixin flex-direction($value){
+	@include css3(flex-direction, $value);
+}
+@mixin flex-wrap($value){
+	@include css3(flex-wrap, $value);
+}
+@mixin flex-align($value){
+	@if $value == start {
+		$value: flex-start;
+	}
+	@else if $value == end {
+		$value: flex-end;
+	}
+	@else{
+		$value: center;
+	}
+
+  -ms-flex-align: $value;
+  @include css3(align-items, $value);
+}
+
+@mixin flex-justify($value){
+	@if $value == start {
+		$value: flex-start;
+	}
+	@else if $value == end {
+		$value: flex-end;
+	}
+	@else{
+		$value: center;
+	}
+
+  -ms-flex-pack: $value;
+  @include css3(justify-content, $value);
+}
+@mixin flex-center(){
+	@include flex-align(center);
+	@include flex-justify(center);
+}
+
+/* Flex END */
+
+
+/* Animation SCSS Mixin START */
+@mixin keyframes($name) {
+  @-o-keyframes #{$name} { @content };
+  @-moz-keyframes #{$name} { @content };
+  @-webkit-keyframes #{$name} { @content }; 
+  @-keyframes #{$name} { @content };
+}
+@mixin animation-name($name) {
+  -o-animation-name: $name;
+  -moz-animation-name: $name;
+  -webkit-animation-name: $name;
+  animation-name: $name;
+}
+@mixin animation-duration($duration...) {
+  -o-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -webkit-animation-duration: $duration;
+  animation-duration: $duration;
+}
+@mixin animation-duration($duration...) {
+  -o-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -webkit-animation-duration: $duration;
+  animation-duration: $duration;
+}
+@mixin animation-timing-function($timing...) {
+  -o-animation-timing-function: $timing;
+  -moz-animation-timing-function: $timing;
+  -webkit-animation-timing-function: $timing;
+  animation-timing-function: $timing;
+}
+@mixin animation-iteration-count($count...) {
+  -o-animation-iteration-count: $count;
+  -moz-animation-iteration-count: $count;
+  -webkit-animation-iteration-count: $count;
+  animation-iteration-count: $count;
+}
+@mixin animation-direction($direction...) {
+  -o-animation-direction: $direction;
+  -moz-animation-direction: $direction;
+  -webkit-animation-direction: $direction;
+  animation-direction: $direction;
+}
+@mixin animation-fill-mode($fill...) {
+  -o-animation-fill-mode: $fill;
+  -moz-animation-fill-mode: $fill;
+  -webkit-animation-fill-mode: $fill;
+  animation-fill-mode: $fill;
+}
+@mixin animation-play-state($state...) {
+  -o-animation-play-state: $state;
+  -moz-animation-play-state: $state;
+  -webkit-animation-play-state: $state;
+  animation-play-state: $state;
+}
+@mixin animation($animation...) {
+  -o-animation: $animation;
+  -moz-animation: $animation;
+  -webkit-animation: $animation;
+  animation: $animation;
+}
+/* Animation SCSS Mixin END */

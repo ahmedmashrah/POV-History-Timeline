@@ -1,0 +1,82 @@
+.navbar{
+	background-color: rgba(0,0,0,1);
+	z-index: 100;
+	height: 50px;
+	
+	&.bg{
+		background-color: rgba(0,0,0,0.6);
+	}
+
+	&.navbar-fixed-top{
+		@include transition(all 0.3s ease-in-out);
+		@include shadow(2, box);
+		.navbar-header{
+			display: block;
+			.fa{
+				color: #fff;
+			}
+			.logo{
+				width: initial !important;
+				height: 100%;
+			}
+		}
+		ul{
+			width: auto;
+			li{
+				a{
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+
+.pov-nav{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @include css3(flex-flow, column nowrap);
+	justify-content: flex-end;
+	width: 100%;
+  @include transition(all 0.3s ease-in-out);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+	li{
+		margin: 0;
+		padding: 0;
+		flex-grow: 1;
+		text-align: center;
+
+		a{
+			text-decoration: none;
+			@include body-font();
+			font-size: 18px;
+			font-weight: normal;
+			position: relative;
+
+			&:visited,
+			&:focus,
+			&:hover,
+			&:active{
+				background-color: transparent;
+			}
+		}
+		&.active a{
+			background-color: #ffc107;
+			color: #333;
+		}
+	}
+}
+@include MQ(sm){
+	.pov-nav{
+  @include css3(flex-flow, row nowrap);
+	}
+}
+.pov-nav#page-nav a{
+	display: block;
+	padding: 10px 0px;
+}

@@ -1,0 +1,46 @@
+#bs-grid-toggle {
+  z-index: 99999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+#bs-grid-toggle>div{
+  text-align: left;
+}
+#bs-grid-toggle label{
+  font-weight: normal;
+}
+
+#bs-grid {
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+#bs-grid .container,
+#bs-grid .container-fluid {
+  height: 100%;
+  position: relative;
+}
+#bs-grid .row {
+  height: 100%;
+  outline: 1px solid red;
+}
+#bs-grid .row > div {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+#bs-grid .row > ::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}

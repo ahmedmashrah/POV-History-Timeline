@@ -1,0 +1,523 @@
+/* 
+bg  = background
+bgd = background color 
+fgc = forgound color
+txt = text
+*/
+$bg-odd:  #9E9E9E;
+$bg-even: #607D8B;
+
+$time-home-bgd: #000000;
+$time-home-bgl: #000000;
+$time-home-fgc: #9E9E9E;
+$time-home-txt: #FFFFFF;
+
+$time-8692-bgd: #3F51B5;
+$time-8692-bgl: #2196F3;
+$time-8692-fgc: #03A9F4;
+$time-8692-txt: #FFFFFF;
+
+$time-9398-bgd: #4CAF50;
+$time-9398-bgl: #8BC34A;
+$time-9398-fgc: #CDDC39;
+$time-9398-txt: #FFFFFF;
+
+/*
+$time--bgd: #;
+$time--fgc: #;
+$time--txt: #;
+*/
+
+@mixin time-default-style($time, $bgd, $bgl, $fgc, $txt){
+	background-color: $bgl;
+	color: $txt;
+	&.main-point{
+		&::before{
+			top: 50%;
+			height: 50%;
+			background-color: $bgd;
+		}
+		.point-mark>div{
+			background-color: $bgd;
+			color: $txt;
+		}
+		p{
+			color: $txt;
+		}
+	}
+
+	/* sub page style */
+	&+.time-#{$time}{
+		background-color: $bgd;
+
+		&::before,
+		.point-mark>div{
+			background-color: lighten($fgc,20%);
+			color: darken($txt,100%);
+		}
+		.half{
+			>div:nth-child(odd){
+				background-color: $bgl;
+			}
+			>div:nth-child(even){
+				background-color: $bgd;
+			}
+		}
+		.quotes{
+			&:hover{
+				background-color: lighten($bgd, 5%);
+			}
+		}
+		@include MQ(xs){
+			.quotes{
+				&:hover{
+					background-color: transparent;
+				}
+			}
+		}
+	}
+	@content;
+}
+
+
+
+body{
+	background-color: $background-color;
+	color: $forgound-color;
+}
+.container-fluid{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.vertical-line{
+	@include vertical-line($background-color);
+}
+
+.sections{
+	height: 100%;
+
+	.section{
+		position: relative;
+		@include flex();
+		@include flex-direction(column);
+	  @include flex-center();
+		height: 100%;
+		background-color: $bg-odd;
+		border-bottom: dashed 1px;
+
+		&:nth-child(even){
+			background-color: $bg-even;
+		}
+
+		> *{
+			position: relative;
+		}
+
+		&.point,
+		&.main-point{
+			.overlay{
+				height: 100%;
+				width: 100%;
+				position: relative;
+				@include flex();
+				@include flex-direction(column);
+				@include flex-center();
+			}
+			.point-mark{
+				display: inline-block;
+				border-radius: 50%;
+				z-index: 2;
+
+				div{
+					font-size: 12px;
+					width: 50px;
+					height: 50px;
+					border-radius: 50%;
+					background-color: #fff;
+					color: #000;
+					margin: 0;
+					padding: 0;
+					@include body-font();
+					@include shadow(2, box);
+					@include flex();
+					@include flex-direction(row);
+					@include flex-center();
+					@include transition(all .1s ease-in-out);
+
+					&:hover{
+						@include shadow(4, box);
+						@include css3(transform, scale(1.03, 1.03));
+					}
+					&:active{
+						@include shadow(1, box);
+						@include css3(transform, scale(0.90, 0.90));
+					}
+				}
+
+				&.center-screen{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin: (-50px/2) 0 0 (-50px/2);
+				}
+				@include MQ(xs){
+					&.center-screen{
+						top: 75px;
+						left: 8px;
+						margin: 0;
+					}
+				}
+				@include MQ(sm){
+					div{
+						width: 65px;
+						height: 65px;
+						font-size: 15px;
+					}
+					&.center-screen{
+						top: 75px;
+						left: 8px;
+						margin: 0;
+					}
+				}
+				@include MQ(md){
+					div{
+						width: 80px;
+						height: 80px;
+						font-size: 20px;
+					}
+					&.center-screen{
+						margin: (-80px/2) 0 0 (-80px/2);
+					}
+				}
+
+				@include MQ(lg){
+					div{
+						width: 100px;
+						height: 100px;
+						font-size: 25px;
+					}
+					&.center-screen{
+						margin: (-100px/2) 0 0 (-100px/2);
+					}
+				}
+			}
+		}
+		&.main-point{
+			.overlay{
+				background-color: rgba(0,0,0,0.3);
+			}
+			.point-mark{
+				order: 1;
+				div{
+					font-size: 50px;
+					width: 300px;
+					height: 300px;
+				}
+
+				&.center-screen{
+					margin: (-300px/2) 0 0 (-300px/2);
+				}
+			}
+			p{
+				order: 2;
+				@include heading-font();
+				font-size: 3em;
+				color: #fff;
+				text-align: center;
+				margin: 0 auto;
+				padding: 10px 20px 5px;
+				line-height: normal;
+			}
+		}
+		
+		.half{
+			@include flex();
+			@include flex-direction(row);
+		  @include flex-center();
+		  overflow: hidden;
+		  height: 100%;
+		  img{
+		  	width: 100%;
+		  }
+		  > div{
+		  	overflow: hidden;
+		  	flex: 1 auto;
+		  	width: 50%;
+		  	height: 100%;
+		  	@include flex();
+		  	@include flex-direction(column);
+		  	@include flex-center();
+		  	padding: 51px 0;
+		  }
+		  > div:nth-child(even){
+		  	padding: 60px 55px 20px;
+		  }
+		}
+
+		&.point+.point:nth-child(even){
+			.half{
+				> div:nth-child(even){
+					order: 1;
+				}
+				> div:nth-child(odd){
+					order: 2;
+				}
+			}
+		}
+
+		.info{
+			text-align: center;
+			h3.title{
+				@include heading-font();
+				font-size: 24px;
+				margin: 0 auto 20px;
+				padding: 0;
+			}
+			p.desc{
+				@include body-font();
+				font-size: 28px;
+				margin-bottom: 10px;
+				padding: 0px;
+				@include transition(all .1s ease-in-out);
+
+				&:hover{
+					@include shadow(2, text);
+				}
+			}
+		}
+
+		.quotes{
+			text-align: center;
+			padding: 10px 20px;
+			margin: 0 20px;
+			@include transition(all .3s ease-in-out);
+			@include flex();
+			@include flex-direction(row);
+			@include flex-wrap(wrap);
+
+			> *{
+				flex: 1 100%;
+			}
+
+			&:hover{
+				@include shadow(3, box);
+				@include css3(transform, scale(1.02, 1.02));
+			}
+			p.quote{
+				@include serif-font();
+				font-size: 24px;
+				line-height: 34px;
+				margin: 0;
+				order: 2;
+
+				&::before,
+				&::after{
+				  color: #fff;
+				  font-size: 1.5em;
+				  line-height: 0.1em;
+				  vertical-align: -0.4em;
+				}
+
+				&::before{
+				  content: open-quote;
+				  margin-right: 0.20em;
+				}
+				&::after{
+				  content: close-quote;
+				  margin-left: 0.20em;
+				}
+			}
+			.author-img{
+				width: 50px;
+				height: 50px;
+				margin-bottom: 15px;
+				order: 1;
+
+				img{
+					width: 50px;
+					height: 50px;
+					border-radius: 50%;
+					border: 2px solid #fff;
+					@include shadow(2, box);
+				}
+			}
+			.by-who{
+				@include body-font();
+				font-size: 14px;
+				order: 3;
+			}
+		}
+
+		/* Home page style */
+		&.time-home{
+			background: $time-home-bgd url() no-repeat center center fixed;
+			color: $time-home-txt;
+			height: 100%;
+			.overlay{
+				background-color: rgba(0,0,0,0.5);
+			}
+			.logo{
+				width: 60%;
+				max-width: 1200px;
+				max-height: 500px;
+				margin: 0 auto;
+			}
+			p{
+				font-size: 60px;
+				@include heading-font();
+				margin: 0;
+			}
+			&::before{
+				top: 50%;
+				height: 50%;
+				background-color: $time-home-fgc;
+			}
+		}
+		/* 1986-1992 home page style */
+		&.time-8692{
+			@include time-default-style(8692, $time-8692-bgd, $time-8692-bgl, $time-8692-fgc, $time-8692-txt);
+		}
+
+		/* 1993-1998 home page style */
+		&.time-9398{
+			@include time-default-style(9398, $time-9398-bgd, $time-9398-bgl, $time-9398-fgc, $time-9398-txt);
+		}
+	}
+
+
+  @include MQ(xs){
+  	.section{
+
+  		&.main-point{
+  			height: 100%;
+  			background-image: none;
+  			.overlay{
+  				background-color: rgba(0,0,0,0.15);
+  			}
+  			.point-mark{
+  				> div{
+  					width: 150px;
+  					height: 150px;
+  					font-size: 25px;
+
+  					&:hover,
+						&:active{
+							@include shadow(2, box);
+							@include css3(transform, none);
+						}
+  				}
+  			}
+  			p{
+  				font-size: 2em;
+  				padding: 30px;
+  			}
+  			&.vertical-line::before{
+  				display: none !important;
+  			}
+  		}
+
+	  	.half{
+		  	@include flex-direction(column);
+		  	@include flex-align(start);
+		  	@include flex-justify(start);
+		  	height: inherit;
+		  	padding: 80px 40px 25px 70px;
+		  	>div{
+		  		width: 100%;
+		  		padding: 0px;
+		  	}
+		  	> div:nth-child(even){
+		  		padding: 20px 0px 0px 0px;
+		  	}
+		  }
+		  &.point{
+		  	display: block;
+		  	height: initial;
+		  	.overlay{
+		  		display: block;
+			  	height: initial;
+		  	}
+		  }
+			&.point+.point:nth-child(even){
+				.half{
+					> div:nth-child(even){
+						order: 2;
+					}
+					> div:nth-child(odd){
+						order: 1;
+					}
+				}
+			}
+			.info{
+				p.desc{
+					font-size: 20px;
+				}
+			}
+			.quotes{
+				.author-img,
+				.by-who{
+					flex: 1 auto;
+					order: 2;
+				}
+				p{
+					order: 1;
+				}
+
+				&:hover{
+					@include shadow(0, box);
+					@include css3(transform, none);
+				}
+			}
+		}
+  }
+
+	@include MQ(md){
+		.quotes{
+			padding-top: 20px;
+			padding-bottom: 10px;
+			p.quote{
+				font-size: 32px;
+				line-height: 42px;
+
+				&::before,
+				&::after{
+				  font-size: 3em;
+				  line-height: 0.1em;
+				  vertical-align: -0.4em;
+				}
+				&::before{
+				  margin-right: 0.25em;
+				}
+				&::after{
+				  margin-left: 0.25em;
+				}
+			}
+			.by-who{
+				font-size: 18px;
+			}
+			.author-img{
+				width: 100px;
+				height: 100px;
+				margin-bottom: 25px;
+				img{
+					width: 100px;
+					height: 100px;
+					border-width: 3px;
+				}
+			}
+		}
+	}
+}
+
+
+/*&.time-8692+.time-8692:nth-child(odd){
+	background:
+		linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, $time-8692-bgd 50%, $time-8692-bgd 100%) no-repeat,
+		url('http://placehold.it/1200/fed433') no-repeat left center
+	;
+	background-attachment: fixed;
+
+	@include filter-gradient(rgba(255,255,255,0), $time-8692-bgd, horizontal); // IE6-9
+	@include background-image(linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, $time-8692-bgd 50%, $time-8692-bgd 100%));
+}*/

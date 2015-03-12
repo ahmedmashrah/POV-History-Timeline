@@ -1,0 +1,1107 @@
+/* Flex START */
+/* Flex END */
+/* Animation SCSS Mixin START */
+/* Animation SCSS Mixin END */
+/* line 2, scss/_core.scss */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 7, scss/_core.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* line 11, scss/_core.scss */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 17, scss/_core.scss */
+body {
+  overflow-x: hidden;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #7f8c97;
+  background-color: #e9f0f5;
+}
+
+/* line 24, scss/_core.scss */
+a,
+a:active,
+a:hover,
+a:focus,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 33, scss/_core.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 37, scss/_core.scss */
+p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* line 42, scss/_core.scss */
+p.large {
+  font-size: 16px;
+}
+
+/* line 46, scss/_core.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* line 50, scss/_core.scss */
+h1, h2 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* line 55, scss/_core.scss */
+.text-muted {
+  color: #777;
+}
+
+/* line 59, scss/_core.scss */
+.text-primary {
+  color: #8BC34A;
+}
+
+/* line 63, scss/_core.scss */
+.img-centered {
+  margin: 0 auto;
+}
+
+/* line 67, scss/_core.scss */
+.bg-light-gray {
+  background-color: #f7f7f7;
+}
+
+/* line 71, scss/_core.scss */
+.bg-darkest-gray {
+  background-color: black;
+}
+
+/* line 77, scss/_core.scss */
+.btn-primary {
+  color: white;
+  background-color: #8BC34A;
+  border-color: #8BC34A;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+/* line 8, scss/_mixins.scss */
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,
+.btn-primary .open .dropdown-toggle {
+  color: white;
+  background-color: #71a436;
+  border-color: #6c9c34;
+}
+/* line 17, scss/_mixins.scss */
+.btn-primary:active, .btn-primary.active,
+.btn-primary .open .dropdown-toggle {
+  background-image: none;
+}
+/* line 25, scss/_mixins.scss */
+.btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
+  background-color: #8BC34A;
+  border-color: #8BC34A;
+}
+/* line 35, scss/_mixins.scss */
+.btn-primary .badge {
+  color: #8BC34A;
+  background-color: white;
+}
+
+/* line 83, scss/_core.scss */
+.btn-xl {
+  color: white;
+  background-color: #8BC34A;
+  border-color: #8BC34A;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 3px;
+  font-size: 18px;
+  padding: 20px 40px;
+}
+/* line 8, scss/_mixins.scss */
+.btn-xl:hover, .btn-xl:focus, .btn-xl:active, .btn-xl.active,
+.btn-xl .open .dropdown-toggle {
+  color: white;
+  background-color: #71a436;
+  border-color: #6c9c34;
+}
+/* line 17, scss/_mixins.scss */
+.btn-xl:active, .btn-xl.active,
+.btn-xl .open .dropdown-toggle {
+  background-image: none;
+}
+/* line 25, scss/_mixins.scss */
+.btn-xl.disabled, .btn-xl.disabled:hover, .btn-xl.disabled:focus, .btn-xl.disabled:active, .btn-xl.disabled.active, .btn-xl[disabled], .btn-xl[disabled]:hover, .btn-xl[disabled]:focus, .btn-xl[disabled]:active, .btn-xl[disabled].active, fieldset[disabled] .btn-xl, fieldset[disabled] .btn-xl:hover, fieldset[disabled] .btn-xl:focus, fieldset[disabled] .btn-xl:active, fieldset[disabled] .btn-xl.active {
+  background-color: #8BC34A;
+  border-color: #8BC34A;
+}
+/* line 35, scss/_mixins.scss */
+.btn-xl .badge {
+  color: #8BC34A;
+  background-color: white;
+}
+
+/* line 92, scss/_core.scss */
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn:active:focus {
+  outline: none;
+}
+
+/* line 99, scss/_core.scss */
+.divider {
+  padding: 1px;
+  border-bottom: 1px #ddd dashed;
+  margin: 40px auto;
+  width: 30%;
+}
+
+/* line 106, scss/_core.scss */
+#pbs-menu .adbanner-container,
+#pbs-adbanner-container-main-div {
+  display: none !important;
+}
+
+/* line 112, scss/_core.scss */
+::-moz-selection {
+  text-shadow: none;
+  background: #8BC34A;
+}
+
+/* line 117, scss/_core.scss */
+::selection {
+  text-shadow: none;
+  background: #8BC34A;
+}
+
+/* line 122, scss/_core.scss */
+img::selection {
+  background: transparent;
+}
+
+/* line 126, scss/_core.scss */
+img::-moz-selection {
+  background: transparent;
+}
+
+/* line 130, scss/_core.scss */
+body {
+  webkit-tap-highlight-color: #8BC34A;
+}
+
+/* Ripple effect START */
+/* line 136, scss/_core.scss */
+.ripple {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 141, scss/_core.scss */
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: white;
+  -webkit-animation: ripple 2s;
+  -moz-animation: ripple 2s;
+  -ms-animation: ripple 2s;
+  -o-animation: ripple 2s;
+  animation: ripple 2s;
+}
+
+@-o-keyframes ripple {
+  from {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  to {
+    -webkit-transform: scale(80);
+    -moz-transform: scale(80);
+    -ms-transform: scale(80);
+    -o-transform: scale(80);
+    transform: scale(80);
+    opacity: 0;
+  }
+}
+@-moz-keyframes ripple {
+  from {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  to {
+    -webkit-transform: scale(80);
+    -moz-transform: scale(80);
+    -ms-transform: scale(80);
+    -o-transform: scale(80);
+    transform: scale(80);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes ripple {
+  from {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  to {
+    -webkit-transform: scale(80);
+    -moz-transform: scale(80);
+    -ms-transform: scale(80);
+    -o-transform: scale(80);
+    transform: scale(80);
+    opacity: 0;
+  }
+}
+@-keyframes ripple {
+  /* line 151, scss/_core.scss */
+  from {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.4;
+  }
+
+  /* line 155, scss/_core.scss */
+  to {
+    -webkit-transform: scale(80);
+    -moz-transform: scale(80);
+    -ms-transform: scale(80);
+    -o-transform: scale(80);
+    transform: scale(80);
+    opacity: 0;
+  }
+}
+/* Ripple effect END */
+/* line 163, scss/_core.scss */
+.embed {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+/* line 170, scss/_core.scss */
+.embed .embed-item,
+.embed embed,
+.embed iframe,
+.embed object,
+.embed video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 95%;
+  height: 95%;
+  border: 0;
+}
+/* line 185, scss/_core.scss */
+.embed.embed-16by9 {
+  padding-bottom: 55%;
+}
+/* line 188, scss/_core.scss */
+.embed.embed-4by3 {
+  padding-bottom: 75%;
+}
+
+/* line 1, scss/_nav.scss */
+.navbar {
+  background-color: black;
+  z-index: 100;
+  height: 50px;
+}
+/* line 6, scss/_nav.scss */
+.navbar.bg {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+/* line 10, scss/_nav.scss */
+.navbar.navbar-fixed-top {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
+}
+/* line 13, scss/_nav.scss */
+.navbar.navbar-fixed-top .navbar-header {
+  display: block;
+}
+/* line 15, scss/_nav.scss */
+.navbar.navbar-fixed-top .navbar-header .fa {
+  color: #fff;
+}
+/* line 18, scss/_nav.scss */
+.navbar.navbar-fixed-top .navbar-header .logo {
+  width: initial !important;
+  height: 100%;
+}
+/* line 23, scss/_nav.scss */
+.navbar.navbar-fixed-top ul {
+  width: auto;
+}
+/* line 26, scss/_nav.scss */
+.navbar.navbar-fixed-top ul li a {
+  font-size: 16px;
+}
+
+/* line 34, scss/_nav.scss */
+.pov-nav {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  -o-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 48, scss/_nav.scss */
+.pov-nav li {
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+/* line 54, scss/_nav.scss */
+.pov-nav li a {
+  text-decoration: none;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  position: relative;
+}
+/* line 61, scss/_nav.scss */
+.pov-nav li a:visited, .pov-nav li a:focus, .pov-nav li a:hover, .pov-nav li a:active {
+  background-color: transparent;
+}
+/* line 68, scss/_nav.scss */
+.pov-nav li.active a {
+  background-color: #ffc107;
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  /* line 75, scss/_nav.scss */
+  .pov-nav {
+    -webkit-flex-flow: row nowrap;
+    -moz-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    -o-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+  }
+}
+/* line 79, scss/_nav.scss */
+.pov-nav#page-nav a {
+  display: block;
+  padding: 10px 0px;
+}
+
+/*@import 'scss/main';*/
+/* 
+bg  = background
+bgd = background color 
+fgc = forgound color
+txt = text
+*/
+/*
+$time--bgd: #;
+$time--fgc: #;
+$time--txt: #;
+*/
+/* line 31, scss/_timeline.scss */
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0px;
+}
+
+/* line 38, scss/_timeline.scss */
+.modal-content {
+  height: 100%;
+  border-radius: 0;
+}
+
+/* line 77, scss/_timeline.scss */
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+/* line 81, scss/_timeline.scss */
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+/* line 109, scss/_mixins.scss */
+.vertical-line::before {
+  content: '';
+  position: absolute;
+  left: 32px;
+  top: 0px;
+  height: 100%;
+  width: 4px;
+  background-color: #cccccc;
+  z-index: 1;
+}
+@media only screen and (min-width: 992px) {
+  /* line 121, scss/_mixins.scss */
+  .vertical-line::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+/* line 90, scss/_timeline.scss */
+.sections {
+  height: 100%;
+}
+/* line 93, scss/_timeline.scss */
+.sections .section {
+  position: relative;
+  min-height: 100%;
+  background-color: #9E9E9E;
+  border-bottom: dashed 1px;
+  /* Home page style */
+  /* 1986-1992 home page style */
+  /* 1993-1998 home page style */
+}
+/* line 99, scss/_timeline.scss */
+.sections .section:nth-child(even) {
+  background-color: #607D8B;
+}
+/* line 109, scss/_mixins.scss */
+.sections .section.point::before, .sections .section.main-point::before {
+  content: '';
+  position: absolute;
+  left: 32px;
+  top: 0px;
+  height: 100%;
+  width: 4px;
+  background-color: black;
+  z-index: 1;
+}
+@media only screen and (min-width: 992px) {
+  /* line 121, scss/_mixins.scss */
+  .sections .section.point::before, .sections .section.main-point::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+/* line 107, scss/_timeline.scss */
+.sections .section.point .overlay, .sections .section.main-point .overlay {
+  width: 100%;
+  position: relative;
+}
+/* line 111, scss/_timeline.scss */
+.sections .section.point .point-mark, .sections .section.main-point .point-mark {
+  display: inline-block;
+  border-radius: 50%;
+  position: absolute;
+  top: 75px;
+  left: 8px;
+  z-index: 2;
+}
+/* line 119, scss/_timeline.scss */
+.sections .section.point .point-mark > div, .sections .section.main-point .point-mark > div {
+  font-size: 12px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+/* line 135, scss/_timeline.scss */
+.sections .section.main-point {
+  height: 100%;
+  background-image: none;
+}
+/* line 138, scss/_timeline.scss */
+.sections .section.main-point .overlay {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+/* line 145, scss/_timeline.scss */
+.sections .section.main-point .point-mark {
+  position: initial;
+  order: 1;
+}
+/* line 148, scss/_timeline.scss */
+.sections .section.main-point .point-mark div {
+  font-size: 25px;
+  width: 150px;
+  height: 150px;
+}
+/* line 154, scss/_timeline.scss */
+.sections .section.main-point .title {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  padding: 30px;
+  order: 2;
+  z-index: 2;
+}
+/* line 166, scss/_timeline.scss */
+.sections .section .half {
+  width: 100%;
+}
+/* line 168, scss/_timeline.scss */
+.sections .section .half img {
+  width: 100%;
+}
+/* line 171, scss/_timeline.scss */
+.sections .section .half > div:nth-child(odd) {
+  display: none;
+}
+/* line 174, scss/_timeline.scss */
+.sections .section .half > div:nth-child(even) {
+  padding: 30px 65px;
+}
+/* line 179, scss/_timeline.scss */
+.sections .section .info {
+  text-align: center;
+}
+/* line 181, scss/_timeline.scss */
+.sections .section .info h3.title {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin: 0 auto 20px;
+  padding: 0;
+}
+/* line 187, scss/_timeline.scss */
+.sections .section .info .desc {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 0px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+/* line 194, scss/_timeline.scss */
+.sections .section .info .modal-link.video {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  display: block;
+}
+/* line 199, scss/_timeline.scss */
+.sections .section .info .modal-link.video img {
+  display: block;
+}
+/* line 202, scss/_timeline.scss */
+.sections .section .info .modal-link.video:after, .sections .section .info .modal-link.video:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+/* line 209, scss/_timeline.scss */
+.sections .section .info .modal-link.video:before {
+  width: 60px;
+  height: 60px;
+  margin: -30px 0 0 -30px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.42);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
+}
+/* line 218, scss/_timeline.scss */
+.sections .section .info .modal-link.video:after {
+  border: 15px solid transparent;
+  border-left: 18px solid #fff;
+  margin-top: -15px;
+  margin-left: -6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
+}
+/* line 226, scss/_timeline.scss */
+.sections .section .info .modal-link.video:hover:after, .sections .section .info .modal-link.video:hover:before {
+  -webkit-transform: scale(1.03, 1.03);
+  -moz-transform: scale(1.03, 1.03);
+  -ms-transform: scale(1.03, 1.03);
+  -o-transform: scale(1.03, 1.03);
+  transform: scale(1.03, 1.03);
+}
+/* line 229, scss/_timeline.scss */
+.sections .section .info .modal-link.video:hover:before {
+  background: rgba(0, 0, 0, 0.7);
+}
+/* line 236, scss/_timeline.scss */
+.sections .section .quotes {
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+/* line 243, scss/_timeline.scss */
+.sections .section .quotes .quote {
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 34px;
+  margin: 0;
+  padding: 0;
+  order: 1;
+  flex: 1 100%;
+}
+/* line 252, scss/_timeline.scss */
+.sections .section .quotes .quote::before, .sections .section .quotes .quote::after {
+  color: #fff;
+  font-size: 3.5em;
+  line-height: 0.1em;
+}
+/* line 259, scss/_timeline.scss */
+.sections .section .quotes .quote::before {
+  content: open-quote;
+  margin-right: 0.20em;
+  vertical-align: -0.3em;
+}
+/* line 264, scss/_timeline.scss */
+.sections .section .quotes .quote::after {
+  content: close-quote;
+  margin-left: 0.20em;
+  vertical-align: -0.6em;
+}
+/* line 270, scss/_timeline.scss */
+.sections .section .quotes .author-img {
+  width: 75px;
+  height: 75px;
+  order: 2;
+  flex: 1 auto;
+}
+/* line 276, scss/_timeline.scss */
+.sections .section .quotes .author-img img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
+}
+/* line 284, scss/_timeline.scss */
+.sections .section .quotes .by-who {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  order: 2;
+  flex: 1 auto;
+}
+/* line 293, scss/_timeline.scss */
+.sections .section.time-home {
+  background: #000000 url() no-repeat center center fixed;
+  color: #FFFFFF;
+  height: 100%;
+}
+/* line 297, scss/_timeline.scss */
+.sections .section.time-home .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 300, scss/_timeline.scss */
+.sections .section.time-home .logo {
+  width: 70%;
+  max-width: 1200px;
+  max-height: 500px;
+  margin: 0 auto;
+}
+/* line 306, scss/_timeline.scss */
+.sections .section.time-home p {
+  font-size: 40px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+/* line 311, scss/_timeline.scss */
+.sections .section.time-home::before {
+  display: none;
+}
+/* line 316, scss/_timeline.scss */
+.sections .section.time-8692 {
+  background-color: #2196F3;
+  color: #FFFFFF;
+  /* sub page style */
+}
+/* line 47, scss/_timeline.scss */
+.sections .section.time-8692.main-point::before {
+  background-color: #3F51B5;
+}
+/* line 50, scss/_timeline.scss */
+.sections .section.time-8692.main-point .point-mark > div {
+  background-color: #3F51B5;
+  color: #FFFFFF;
+}
+/* line 54, scss/_timeline.scss */
+.sections .section.time-8692.main-point p {
+  color: #FFFFFF;
+}
+/* line 60, scss/_timeline.scss */
+.sections .section.time-8692 + .time-8692 {
+  background-color: #3F51B5;
+}
+/* line 63, scss/_timeline.scss */
+.sections .section.time-8692 + .time-8692::before,
+.sections .section.time-8692 + .time-8692 .point-mark > div {
+  background-color: #60ccfd;
+  color: black;
+}
+/* line 68, scss/_timeline.scss */
+.sections .section.time-8692 + .time-8692 .half > div:nth-child(odd) {
+  background-color: #2196F3;
+}
+/* line 321, scss/_timeline.scss */
+.sections .section.time-9398 {
+  background-color: #8BC34A;
+  color: #FFFFFF;
+  /* sub page style */
+}
+/* line 47, scss/_timeline.scss */
+.sections .section.time-9398.main-point::before {
+  background-color: #4CAF50;
+}
+/* line 50, scss/_timeline.scss */
+.sections .section.time-9398.main-point .point-mark > div {
+  background-color: #4CAF50;
+  color: #FFFFFF;
+}
+/* line 54, scss/_timeline.scss */
+.sections .section.time-9398.main-point p {
+  color: #FFFFFF;
+}
+/* line 60, scss/_timeline.scss */
+.sections .section.time-9398 + .time-9398 {
+  background-color: #4CAF50;
+}
+/* line 63, scss/_timeline.scss */
+.sections .section.time-9398 + .time-9398::before,
+.sections .section.time-9398 + .time-9398 .point-mark > div {
+  background-color: #e3eb90;
+  color: black;
+}
+/* line 68, scss/_timeline.scss */
+.sections .section.time-9398 + .time-9398 .half > div:nth-child(odd) {
+  background-color: #8BC34A;
+}
+@media only screen and (min-width: 992px) {
+  /* line 327, scss/_timeline.scss */
+  .sections .section {
+    min-height: initial;
+    height: 100%;
+  }
+  /* line 332, scss/_timeline.scss */
+  .sections .section.point .overlay, .sections .section.main-point .overlay {
+    height: 100%;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+  }
+  /* line 338, scss/_timeline.scss */
+  .sections .section.point .point-mark, .sections .section.main-point .point-mark {
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    width: 80px;
+    margin: -40px 0 0 -40px;
+  }
+  /* line 344, scss/_timeline.scss */
+  .sections .section.point .point-mark div, .sections .section.main-point .point-mark div {
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+  }
+  /* line 349, scss/_timeline.scss */
+  .sections .section.point .point-mark div:hover, .sections .section.main-point .point-mark div:hover {
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.22), 0 14px 45px rgba(0, 0, 0, 0.25);
+    -webkit-transform: scale(1.03, 1.03);
+    -moz-transform: scale(1.03, 1.03);
+    -ms-transform: scale(1.03, 1.03);
+    -o-transform: scale(1.03, 1.03);
+    transform: scale(1.03, 1.03);
+  }
+  /* line 353, scss/_timeline.scss */
+  .sections .section.point .point-mark div:active, .sections .section.main-point .point-mark div:active {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 6px rgba(0, 0, 0, 0.12);
+    -webkit-transform: scale(0.9, 0.9);
+    -moz-transform: scale(0.9, 0.9);
+    -ms-transform: scale(0.9, 0.9);
+    -o-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+  /* line 361, scss/_timeline.scss */
+  .sections .section.main-point .overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  /* line 364, scss/_timeline.scss */
+  .sections .section.main-point .point-mark {
+    position: initial;
+    width: 300px;
+    height: 300px;
+    margin: 0;
+  }
+  /* line 369, scss/_timeline.scss */
+  .sections .section.main-point .point-mark div {
+    width: 300px;
+    height: 300px;
+    font-size: 50px;
+  }
+  /* line 374, scss/_timeline.scss */
+  .sections .section.main-point .point-mark .title {
+    font-size: 35px;
+  }
+  /* line 379, scss/_timeline.scss */
+  .sections .section .half {
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100%;
+  }
+  /* line 385, scss/_timeline.scss */
+  .sections .section .half > div {
+    overflow: hidden;
+    flex: 1 auto;
+    padding-top: 51px;
+    width: 50%;
+    height: 100%;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+  }
+  /* line 394, scss/_timeline.scss */
+  .sections .section .half > div.cover-bg {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+  }
+  /* line 398, scss/_timeline.scss */
+  .sections .section .half > div.cover-bg img {
+    display: none;
+  }
+  /* line 403, scss/_timeline.scss */
+  .sections .section .half > div:nth-child(odd) {
+    display: inherit;
+  }
+  /* line 406, scss/_timeline.scss */
+  .sections .section .half > div:nth-child(even) {
+    padding: 0px 45px 20px;
+  }
+  /* line 413, scss/_timeline.scss */
+  .sections .section.point + .point:nth-child(even) .half > div:nth-child(odd) {
+    order: 2;
+  }
+  /* line 416, scss/_timeline.scss */
+  .sections .section.point + .point:nth-child(even) .half > div:nth-child(even) {
+    order: 1;
+  }
+  /* line 422, scss/_timeline.scss */
+  .sections .section .info p.desc {
+    font-size: 24px;
+  }
+  /* line 427, scss/_timeline.scss */
+  .sections .section .quotes .quote {
+    order: 2;
+  }
+  /* line 430, scss/_timeline.scss */
+  .sections .section .quotes .author-img {
+    order: 1;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 30px;
+  }
+  /* line 435, scss/_timeline.scss */
+  .sections .section .quotes .author-img img {
+    width: 120px;
+    height: 120px;
+  }
+  /* line 440, scss/_timeline.scss */
+  .sections .section .quotes .by-who {
+    order: 3;
+  }
+  /* line 445, scss/_timeline.scss */
+  .sections .section.time-8692.main-point:before {
+    height: 50%;
+    top: 50%;
+  }
+}
