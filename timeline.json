@@ -1,0 +1,252 @@
+{
+	"logo": "src/img/pov-logo-white-transparent.png",
+	"sub_title": "Dive into our history",
+	"id": "time-home",
+	"bg_img": "",
+	"sections": [
+		{
+			"section_label": "1986-1992",
+			"id": "time-8692",
+			"section_info": "A Test Bed for Storytelling & Dialogue Through Television",
+			"bg_img": "",
+			"points": [
+				{
+					"year": 1988,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "POV Debuts on PBS",
+					"desc": "At the 1986 U.S. Film Festival (later The Sundance Film Festival), Marc Weiss meets FRONTLINE's David Fanning at a festival panel and is convinced there is a future for bold, independent, point-of-view documentary storytelling on television. Soon after, he is organizing meetings with the producers and public TV representatives who were at odds in the 1980s but who would collaborate and form the editorial core of a new PBS documentary series — POV.",
+					"video": {
+						"src": "http://www.youtube.com/embed/-h956Gshg3w",
+						"cover_img": "http://placehold.it/640x390/333333",
+						"type": "youtube",
+						"aspect_ratio": "4by3"
+					}
+				},
+				{
+					"year": 1988,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "quotes",
+					"quote": "When POV broadcast its first season, the Internet was just emerging from the rarefied world of university research and defense communications. Cable was new... Faxes were a novelty. Email, like the CD-ROM, was far in the future. DVD was just a glimmer in some corporate eye.",
+					"by_who": "Cara Mertes, Executive Director, 1999-2006",
+					"author_img": "http://placehold.it/100/333333"
+				},
+				{
+					"year": 1989,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "The Birth of the Web",
+					"desc": "Between 1989 and 1991, Tim Berners-Lee invents Hypertext Transfer Protocol (HTTP), Hypertext Markup Language (HTML) and the World Wide Web."
+				},
+				{
+					"year": 1988,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "You Saw Them On POV First",
+					"desc": "Fahrenheit 9/11 director Michael Moore (Roger & Me and Pets or Meat: The Return to Flint, 1992), The Fog of War: Eleven Lessons from the Life of Robert S. McNamara director Errol Morris (Gates of Heaven, 1988), Ghost World director Terry Zwigoff (Louie Bluie, 1988)"
+				}
+			]
+		},
+		{
+			"section_label": "1993-1998",
+			"id": "time-9398",
+			"section_info": "Experiments in Viewer Engagement",
+			"points": [
+				{
+					"year": 1993,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "User-Generated Video: \"Talking Back\"",
+					"desc": "In 1993, POV started inviting viewers to record video comments to be aired on television in a segment initially called \"Talking Back: Video Letters to P.O.V.\" The videos — sometimes critical, sometimes touching, sometimes funny — became a hallmark of POV's early seasons and another means for new views to be heard on national television.<br /><br />These clips have not been seen since the original September 12, 1993, broadcast.",
+					"video": {
+						"src": "http://www.youtube.com/embed/LV8hj2Er9mM",
+						"cover_img": "http://placehold.it/640x390/333333",
+						"type": "youtube",
+						"aspect_ratio": "4by3"
+					}
+				},
+				{
+					"year": 1993,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "quotes",
+					"quote": "This film is going to be on TV. How can it enhance what you are doing?",
+					"by_who": "Ellen Schneider (Executive Producer, 1993-1994) to a group of community leaders, policymakers and people from AIDS organizations she convened for a screening of Silverlake Life in 1993.",
+					"author_img": "http://placehold.it/100/333333"
+				},
+				{
+					"year": 1994,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "A First Second Screen: POV Online",
+					"desc": "POV launched an unprecedented experiment in the spring of 1994 — POV Online — to enable discourse about its programs over increasingly networked computers. POV hosted chat rooms with filmmakers, timed to national broadcasts, on the most popular online service of the time, America Online (AOL). The first chat included Ross McElwee (known for his Sundance Grand Jury Prize-winning Sherman's March). In 1995, the new POV Interactive department created pov.org, the first web site developed for a public TV series.",
+					"image": {
+						"src": "http://placehold.it/640x390/333333"
+					}
+				},
+				{
+					"year": 1994,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "quotes",
+					"quote": "Finally, the technology is available to start a real dialogue with TV.",
+					"by_who": "Founder Marc Weiss in an early letter to POV's Online Advisory Group",
+					"author_img": "http://www.pbs.org/pov/about/history/media/marc-weiss-then-quote-circle-120.png"
+				},
+				{
+					"year": 1994,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "By the Numbers",
+					"desc": "In the winter of 1994, 5,000,000 Americans had access to the Internet and there were about 10,000 websites."
+				},
+				{
+					"year": 1995,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "More User-Generated Video: \"Two-Way TV\"",
+					"desc": "Two-Way TV was a \"user-generated\" program that POV aired on November 17, 1995, after receiving 1,000 responses — many of which were emails — to Leona's Sister Gerri, about a woman dead after a botched illegal abortion. POV founder Marc Weiss says the program proves \"discussion of public issues can be much more than warring sound-bites.\"<br />Available online for the first time since its original broadcast.",
+					"video": {
+						"src": "http://www.youtube.com/embed/vebkUlu3jKw",
+						"cover_img": "http://placehold.it/640x390/333333",
+						"type": "youtube",
+						"aspect_ratio": "4by3"
+					}
+				},
+				{
+					"year": 1995,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "High Impact Television",
+					"desc": "POV formalized and shared its methodology for national engagement via pre-existing community networks and media in 1995, calling it High Impact Television. It was directly inspired by the campaigns of Silverlake Life in 1993 and The Heart of the Matter, the first film to look at the AIDS crisis as a women's issue, in 1994.",
+					"image": {
+						"src": "http://www.pbs.org/pov/about/history/media/hitv-pov-pyramid-400.png"
+					}
+				},
+				{
+					"year": 1996,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "The First Multimedia Companion Site",
+					"desc": "POV Interactive created its first broadcast companion site in 1996, for Just For The Ride, a film by Amanda Micheli about two inspiring rodeo cowgirls. The site included audio and video interviews, a bucking bronco game and forums about cowgirl fashion.<br />Explore the newly recovered website.",
+					"image": {
+						"src": "http://www.pbs.org/pov/about/history/media/just-for-the-ride-website-340.png"
+					}
+				},
+				{
+					"year": 1996,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "Re: Vietnam",
+					"desc": "The \"Re: Vietnam\" site (stories.org) elicited stories from viewers — one of the first broadcast-related websites to invite user-generated content — not about their experiences of the war itself but rather how it had shaped who they had become. The site included a collection of multimedia submitted to POV by veterans and a by-invitation listserv that gathered a diverse group for a more focused dialogue. Re: Vietnam was named one of USA Today's best websites of the year.",
+					"video": {
+						"src": "http://www.youtube.com/embed/qRiP4N7buio",
+						"cover_img": "http://placehold.it/640x390/333333",
+						"type": "youtube",
+						"aspect_ratio": "4by3"
+					}
+				},
+				{
+					"year": 1997,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "Television Race Initiative",
+					"desc": "The success of High Impact Television inspires the multi-year Television Race Initiative, which uses POV documentaries to facilitate problem-solving activities and community dialogue about race and culture."
+				},
+				{
+					"year": 1997,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "",
+					"desc": "In 1997, AOL launched Instant Messenger (a few months after Mirabilis' ICQ). Both applications allowed users to communicate online in real time."
+				},
+				{
+					"year": 1997,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "POV Salon",
+					"desc": "POV Salon, a continuation of the online experiment, acted like a book club for documentaries, facilitating opinionated conversation in small online groups around POV films and the issues they raised.",
+					"image": {
+						"src": ""
+					}
+				},
+				{
+					"year": 1997,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "",
+					"desc": "The software behind POV Salon was created by Brian Clark, who was at the same time co-creating one of the first \"transmedia\" film projects, a website for the pseudo-documentary horror film, The Blair Witch Project"
+				}
+			]
+		},
+		{
+			"section_label": "1999-2003",
+			"section_id": "time-",
+			"section_info": "",
+			"points": [
+				{
+					"year": 0,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "",
+					"desc": "",
+					"video": {
+						"src": "http://www.youtube.com/embed/LV8hj2Er9mM?rel=0&modestbranding=1&showinfo=0",
+						"cover_img": "http://placehold.it/640x390/333333",
+						"type": "youtube",
+						"aspect_ratio": "4by3"
+					}
+				},
+				{
+					"year": 0,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "quotes",
+					"by_who": "",
+					"quote": "",
+					"author_img": "http://placehold.it/100/333333"
+				}
+			]
+		},
+		{
+			"section_label": "2004-2011",
+			"section_id": "time-0411",
+			"section_info": "Social Networks and Web 2.0",
+			"points": [
+				{
+					"year": 2009,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "The Webby Awards",
+					"desc": "POV Interactive is nominated for its sixth Webby Award in six years in 2009, competing against cable networks and Hollywood film sites for awards that recognize online excellence.",
+					"image": "http://placehold.it/1000/333333"
+				}
+			]
+		},
+		{
+			"section_label": "2012-2015",
+			"section_id": "time-",
+			"section_info": "",
+			"points": [
+				{
+					"year": 0,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "quotes",
+					"by_who": "",
+					"quote": "",
+					"author_img": "http://placehold.it/100/333333"
+				},
+				{
+					"year": 0,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "",
+					"desc": "",
+					"video": {
+						"src": "",
+						"cover_img": "http://placehold.it/640x390/333333",
+						"type": "youtube",
+						"aspect_ratio": "4by3"
+					}
+				}
+			]
+		}
+	]
+}

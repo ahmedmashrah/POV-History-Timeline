@@ -1,49 +1,9 @@
-// Bootstrap Button Variant
-
-@mixin button-variant($color, $background, $border) {
-	color: $color;
-	background-color: $background;
-	border-color: $border;
-
-	&:hover,
-	&:focus,
-	&:active,
-	&.active,
-	.open .dropdown-toggle {
-		color: $color;
-		background-color: darken($background, 10%);
-        border-color: darken($border, 12%);
-	}
-	&:active,
-	&.active,
-	.open .dropdown-toggle {
-		background-image: none;
-	}
-	&.disabled,
-	&[disabled],
-	fieldset[disabled] & {
-		&,
-		&:hover,
-		&:focus,
-		&:active,
-		&.active {
-			background-color: $background;
-			border-color: $border;
-		}
-	}
-
-	.badge {
-		color: $background;
-		background-color: $color;
-	}
-}
-
 // breakpoints
 
 $xs: 767px;
 $sm: 768px;   
 $md: 992px;     
-$lg: 1200px;     
+$lg: 1200px;    
 
 // media queries
 
@@ -116,29 +76,14 @@ $lg: 1200px;
 		background-color: darken($color, 20%);
 		z-index: 1;
 	}
-
-	@include MQ(md){
-		&::before{
-			left: 50%;
-			margin-left: (-4px/2);
-		}
-	}
-}
-
-@mixin serif-font() {
-	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-@mixin script-font() {
-	font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 
 @mixin body-font() {
-	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 @mixin heading-font() {
-	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto Slab", "Roboto", sans-serif;
 	text-transform: uppercase;
 }
 
@@ -208,6 +153,38 @@ $lg: 1200px;
 }
 
 /* Flex END */
+
+@mixin time-default-style($time, $bgd, $bgl, $fgc, $txt){
+  background-color: $bgl;
+  color: $txt;
+  &.main-point{
+    &::before{
+      background-color: $bgd;
+    }
+    .point-mark>div{
+      background-color: $bgd;
+      color: $txt;
+    }
+    p{
+      color: $txt;
+    }
+  }
+
+  /* sub page style */
+  &+.time-#{$time}{
+    background-color: $bgd;
+
+    &::before,
+    .point-mark>div{
+      background-color: lighten($fgc,20%);
+      color: darken($txt,100%);
+    }
+    .half>div:nth-child(odd){
+      background-color: $bgl;
+    }
+  }
+  @content;
+}
 
 
 /* Animation SCSS Mixin START */

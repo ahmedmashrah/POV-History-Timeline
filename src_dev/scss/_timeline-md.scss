@@ -1,0 +1,150 @@
+/* Timeline for MD device */
+@include MQ(md){
+	body{
+		font-size: 16px;
+	}
+	.onepage-pagination{
+		display: block;
+	}
+	.sections{	
+		.section{
+
+			&.point,
+			&.main-point{
+
+				&::before{
+					left: 50%;
+					@include transform(translateX(-50%)); 
+				}
+
+				.point-mark{
+					div{
+						&:hover{
+							@include shadow(4, box);
+							@include css3(transform, scale(1.03, 1.03));
+						}
+						&:active{
+							@include shadow(1, box);
+							@include css3(transform, scale(0.90, 0.90));
+						}
+					}
+				}
+			}
+
+			&.main-point{
+				.overlay{
+					background-color: rgba(0,0,0,0.3);
+					padding: 0px;
+				}
+				.point-mark{
+					position: initial;
+					@include size(200px);
+					div{
+					@include size(200px);
+					font-size: 200%;
+					}
+					.title{
+						font-size: 200%;
+					}
+				}
+			}
+
+			&.point{
+				.point-mark{
+					top: 50%;
+					left: 50%;
+					@include transform(translate3d(-50%, -50%, 0));
+					@include size(80px);
+					div{
+						@include size(80px);
+						font-size: 140%;
+					}
+				}
+			}
+
+			.half{
+				@include flex-direction(row);
+			  height: 100%;
+			  >div{
+				  padding-top: 51px;
+			  	width: 50%;
+			  	height: 100%;
+			  	max-height: initial;
+			  	overflow: hidden;
+			  	@include flex();
+			  	@include flex-direction(column);
+			  	@include flex-center();
+			  	flex: 1 auto;
+			  	&.cover-bg{
+			  		@include background-cover();
+			  		background-position: center center;
+
+			  		img{
+				  		display: none;
+				  	}
+			  	}
+			  }
+			  > div:nth-child(odd){
+			  	display: inherit;
+			  }
+			  > div:nth-child(even){
+			  	padding: 65px 45px 10px;
+			  }
+			}
+
+			&.point:nth-child(even){
+				.half{
+					>div:nth-child(odd){
+						order: 2;
+					}
+					>div:nth-child(even){
+						order: 1;
+					}
+				}
+			}
+			.info{
+				.desc{
+					font-size: 150%;
+				}
+				.media{
+					.modal-link{
+						&.video{
+							width: initial;
+							margin: initial;
+						}
+					}
+					.image{
+						@include size(initial);
+						margin: initial;
+					}
+				}
+			}
+			.quotes{
+				.quote{
+					order: 2;
+					font-size: 30px;
+					line-height: initial;
+				}
+				.author-img{
+					order: 1;
+					width: 120px;
+					height: 120px;
+					margin-bottom: 30px;
+					img{
+						width: 120px;
+						height: 120px;
+					}
+				}
+				.by-who{
+					order: 3;
+				}
+			}
+			&.time-8692.main-point{
+				&:before{
+					height: 50%;
+					top: 50%;
+				}
+			}
+		}
+	}
+}

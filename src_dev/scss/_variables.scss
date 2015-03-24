@@ -1,27 +1,42 @@
-// Variables
-
-$background-color: #fff;
-$forgound-color:   #333;
-$brand-primary:    #8BC34A;
-$brand-danger:     #689F38;
-$gray-darkest:     rgba(0,0,0,1);
-$gray:             #777;
-$gray-lighter:     #f7f7f7;
-$placeholder-text: #bbbbbb;
-
 // colors
+$main-text:        #f1f1f1; // main text
+$link:             #ffffff; // anchor tags
+$background-color: #000000; // body background color
+$selection-color:  #aaaaaa; // body selection color
+$brand-primary:    #ffffff; //
 
-$main-text: #7f8c97; // main text
-$link: #fff; // anchor tags
-$background: #e9f0f5; // body background color
+/* 
+bg  = background
+bgd = background dark 
+fgc = forgound color
+txt = text
+*/
 
-$color-1: #303e49; // blue dark
-$color-2: #c03b44; // red
-$color-3: #ffffff; // white
-$color-4: #75ce66; // green
-$color-5: #f0ca45; // yellow
+$bg-dark-odd:       #111111;
+$bg-light-odd:      #444444;
+$vertical-line-odd: #999999;
+$point-mark-bg:     #eeeeee;
+$text-dark-odd:     #333333;
+$text-light-odd:    #FFFFFF;
 
-// fonts 
+$bg-dark-even:       #272D4E;
+$bg-light-even:      #414a81;
+$vertical-line-even: #fbc02d;
+$point-mark-bg:      #eeeeee;
+$text-dark-even:     #333333;
+$text-light-even:    #FFFFFF;
 
-$primary-font: 'Droid Serif', serif;
-$secondary-font: 'Open Sans', sans-serif;
+$time-home-bgd: #000000;
+$time-home-bgl: #000000;
+$time-home-fgc: #9E9E9E;
+$time-home-txt: #FFFFFF;
+
+$time-8692-bgd: #3F51B5;
+$time-8692-bgl: #2196F3;
+$time-8692-fgc: #03A9F4;
+$time-8692-txt: #FFFFFF;
+
+$time-9398-bgd: #4CAF50;
+$time-9398-bgl: #8BC34A;
+$time-9398-fgc: #CDDC39;
+$time-9398-txt: #FFFFFF;

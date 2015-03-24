@@ -3,7 +3,8 @@
 
 @import 'scss/variables';
 @import 'scss/mixins';
-@import 'scss/core';
+@import 'scss/reset';
 @import 'scss/nav';
-/*@import 'scss/main';*/
-@import 'scss/timeline';
+@import 'scss/timeline-xs';
+@import 'scss/timeline-sm';
+@import 'scss/timeline-md';
