@@ -1,39 +1,126 @@
-.navbar{
+.main-navbar{
 	background-color: rgba(0,0,0,0.6);
 	z-index: 100;
-	height: 50px;
+	min-height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 	margin-top: -70px;
+	@include transition(all 0.3s ease-in-out);
+	@include shadow(2, box);
 	
 	&.show{
 		margin-top: 0px;
 	}
-	&.navbar-fixed-top{
-		@include transition(all 0.3s ease-in-out);
-		@include shadow(2, box);
-		.navbar-header{
-			display: block;
-			.fa{
-				color: #fff;
-			}
-			.logo{
-				width: initial !important;
-				height: 50px;
-			}
-		}
-		ul{
-			width: auto;
-			li{
-				a{
-					font-size: 16px;
-				}
-			}
-		}
+
+	.container{
+		@include display(flex);
+		@include flex-direction(column);
+		@include justify-content(flex-start);
 	}
-	.navbar-toggle{
-		padding: 9px 15px;
-		margin-top: 0px;
-		margin-bottom: 0px;
-		margin-right: 0px;
+
+	.brand-header{
+		@include display(flex);
+		@include flex-direction(row);
+		@include justify-content(flex-start);
+	
+		.hamburger {
+	    width: 50px;
+	    height: 50px;
+	    label{
+	      position: relative;
+	      display: block;
+	      height: 100%;
+	      cursor: pointer;
+	      padding: 0px 15px;
+			  margin-bottom: 0;
+			  margin-top: -5px;
+	    }
+
+	    span,
+	    span:before,
+	    span:after{
+	      content: "";
+	      position: absolute;
+	      width: 20px;
+	      height: 3px;
+	      background: #fff;
+	      @include transform(translate3d(0,0,0));
+	      @include transition-timing-function(cubic-bezier(0.55,0,0.1,1));
+	      @include transition-property(margin,transform,background-color);
+	    }
+
+	    span{
+	      @include transition-duration(0,0,0.5s);
+	      @include transition-delay(.2s,0,0);
+	      @include transform(translate3d(0%,50%,0));
+	      top: 50%;
+	    }
+
+	    span:before,
+	    span:after {
+	      @include transition-duration(.2s,0.2s,0.5s);
+	      @include transition-delay(.2s,0,0);
+	      left: 0;
+	    }
+	    span:before {
+	      margin-top: -8px;
+	    }
+
+	    span:after {
+	      margin-top: 8px;
+	    }
+	  }
+
+	  .brand{
+	  	flex: 1 0 auto;
+	  	margin-left: -50px;
+	  	text-align: center;
+	  	a{
+	  		display: inline-block;
+	  	}
+	  	img{
+		  	height: 50px;
+		  }
+	  }
+	}
+  .nav{
+		@include transition(margin-top 0.5s ease-in-out);
+		opacity: 0;
+		margin-top: -100%;
+  }
+}
+
+.disabled-onepage-scroll{
+	.main-navbar{
+		@include transition(none);
+		margin-top: 0;
+	}
+}
+#menu-toggle{
+	&:checked + .main-navbar{
+		.hamburger{
+		  span {
+		    background-color: transparent !important;
+		    @include transition-delay(.2s,0.2s,0);
+		  }
+		  span:before {
+		    margin-top: 0;
+		    @include transform(rotate(45deg));
+		    @include transition-delay(0,0.2s);
+		  }
+		  span:after{
+		    margin-top: 0;
+		    @include transform(rotate(-45deg));
+		    @include transition-delay(0,0.2s);
+		  }
+		}
+
+		.nav{
+			opacity: 1;
+			margin-top: 0;
+		}
 	}
 }
 
@@ -77,7 +164,27 @@
 		}
 	}
 }
+
 @include MQ(sm){
+	.main-navbar{
+		.container{
+			@include flex-direction(row);
+		}
+		.brand-header{
+			flex: 1 0 auto;
+			.hamburger{
+				display: none;
+			}
+			.brand{
+	  		flex: initial;
+				margin-left: 0;
+			}
+		}
+		.nav{
+			opacity: 1;
+			margin-top: 0;
+		}
+	}
 	.pov-nav{
   @include css3(flex-flow, row nowrap);
 	}

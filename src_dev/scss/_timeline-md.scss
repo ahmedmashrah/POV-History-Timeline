@@ -11,8 +11,7 @@
 
 			&.point,
 			&.main-point{
-
-				&::before{
+				.vertical-line{
 					left: 50%;
 					@include transform(translateX(-50%)); 
 				}
@@ -71,9 +70,10 @@
 			  	height: 100%;
 			  	max-height: initial;
 			  	overflow: hidden;
-			  	@include flex();
+			  	@include display(flex);
 			  	@include flex-direction(column);
-			  	@include flex-center();
+				  @include justify-content(center);
+					@include align-items(center);
 			  	flex: 1 auto;
 			  	&.cover-bg{
 			  		@include background-cover();
@@ -110,12 +110,18 @@
 					.modal-link{
 						&.video{
 							width: initial;
-							margin: initial;
+							margin: 0 auto;
+							max-width: 600px;
+							max-height: 600px;
+							text-align: center;
 						}
 					}
 					.image{
 						@include size(initial);
-						margin: initial;
+						margin: 0 auto;
+						max-width: 600px;
+						max-height: 600px;
+						text-align: center;
 					}
 				}
 			}

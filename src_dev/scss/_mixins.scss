@@ -105,55 +105,6 @@ $lg: 1200px;
 }
 
 
-/* Flex START */
-@mixin flex(){
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-@mixin flex-direction($value){
-	@include css3(flex-direction, $value);
-}
-@mixin flex-wrap($value){
-	@include css3(flex-wrap, $value);
-}
-@mixin flex-align($value){
-	@if $value == start {
-		$value: flex-start;
-	}
-	@else if $value == end {
-		$value: flex-end;
-	}
-	@else{
-		$value: center;
-	}
-
-  -ms-flex-align: $value;
-  @include css3(align-items, $value);
-}
-
-@mixin flex-justify($value){
-	@if $value == start {
-		$value: flex-start;
-	}
-	@else if $value == end {
-		$value: flex-end;
-	}
-	@else{
-		$value: center;
-	}
-
-  -ms-flex-pack: $value;
-  @include css3(justify-content, $value);
-}
-@mixin flex-center(){
-	@include flex-align(center);
-	@include flex-justify(center);
-}
-
-/* Flex END */
-
 @mixin time-default-style($time, $bgd, $bgl, $fgc, $txt){
   background-color: $bgl;
   color: $txt;

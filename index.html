@@ -70,26 +70,26 @@
    -->
 </head>
 <body>
-  <div class="wrapper">
-  <nav id="main-navbar" class="navbar navbar-fixed-top">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" id="hamburger" class="btn navbar-toggle" data-toggle="collapse" data-target="#main-nav">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="fa fa-bars fa-2x"></span>
-        </button>
-        <a class="page-scroll" href="#pov-timeline" data-index="1">
-          <img src="src/img/pov-logo-white-transparent.png" alt="POV Logo" class="logo">
-        </a>
+  <div id="wrapper" class="wrapper">
+    <input id="menu-toggle" type="checkbox" style="display: none;">
+    <header id="main-navbar" class="main-navbar">
+      <div class="container">
+        <div class="brand-header">
+          <div class="hamburger">
+            <label for="menu-toggle"><span></span></label>
+          </div>
+          <div class="brand">
+            <a class="page-scroll" href="#pov-timeline" data-index="1">
+              <img src="src/img/pov-logo-white-transparent.png" alt="POV Logo" class="logo">
+            </a>
+          </div>
+        </div>
+        <nav class="nav">
+          <ul id="main-nav" class="nav navbar-nav pov-nav"></ul>
+        </nav>
       </div>
-
-      <div class="collapse navbar-collapse navbar-right">
-        <ul id="main-nav" class="nav navbar-nav pov-nav"></ul>
-      </div>
-    </div>
-  </nav>
-  <main id="pov-timeline" class="sections"></main>
+    </header>
+  </div>
 
 </body>
 </html>

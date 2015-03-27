@@ -3,11 +3,6 @@ function show_nav(index) {
     hash > 1 ? $("#main-navbar").addClass("show") : $("#main-navbar").removeClass("show");
 }
 
-function updateOncepagePagination() {
-    var shift = $(".onepage-pagination").height() / 2;
-    $(".onepage-pagination").css("margin-top", -1 * shift + "px");
-}
-
 function page_scroll() {
     for (var links = $("body").find(".page-scroll"), i = 0; i < links.length; i++) {
         var link = links[i], index = link.attributes.href.value.replace(/^#/, "");
@@ -15,26 +10,88 @@ function page_scroll() {
     }
 }
 
+function json_to_css(el, style) {
+    var css = "";
+    for (var prop in style) style.hasOwnProperty(prop) && (css += "	" + prop + ": " + style[prop] + ";\n");
+    return el + "{\n" + css + "\n}\n";
+}
+
 function buildTimeline() {
-    var pov_timeline = "", content = "", menu = "", count = 1, section = "", points = "", point = "";
+    var content = "", menu = "", count = 1, section = "", sub_sections = "", sub_section = "", css_style = "";
     $.getJSON("timeline.json", function(result) {
         if (result.sections.length > 0) {
-            pov_timeline = '<section id="' + result.id + '" data-index="' + count++ + '" class="section main-point ' + result.id + '" style="background-image: url(\'' + result.bg_img + '\')"><div class="overlay"><div><img src="' + result.logo + '" class="img-responsive logo"></div><p id="tagline" class="text-center">' + result.sub_title + '</p><ul id="page-nav" class="pov-nav"></ul></div></section>';
+            var wrapper = $("#wrapper"), main = document.createElement("main");
+            $(main).attr({
+                id: "pov-timeline",
+                "class": "sections"
+            }).appendTo(wrapper);
+            var home = document.createElement("section");
+            $(home).attr({
+                id: result.id,
+                "data-index": count++,
+                "class": "section main-point " + result.id
+            }).appendTo(main), css_style += json_to_css(".sections .section." + result.id, result.style.section);
+            var home_overlay = document.createElement("div");
+            $(home_overlay).attr({
+                "class": "overlay"
+            }).html('<div><img src="' + result.logo + '" class="img-responsive logo"></div><p id="tagline" class="text-center">' + result.sub_title + '</p><ul id="page-nav" class="pov-nav"></ul>').appendTo(home), 
+            css_style += json_to_css(".sections .section." + result.id + " .overlay", {
+                "background-color": result.style.overlay
+            });
             for (var a = 0; a < result.sections.length; a++) {
-                section = result.sections[a], menu += '<li><a class="page-scroll ripple" href="#' + section.id + '" data-index="' + count + '">' + section.section_label + "</a></li>", 
-                pov_timeline += '<section id="' + section.id + '" data-index="' + count + '" class="section main-point ' + section.id + '" style="background-image: url(\'' + section.bg_img + '\')"><div class="overlay"><a href="#' + section.id + '-1" data-index="' + ++count + '" class="page-scroll point-mark"><div class="ripple">' + section.section_label + '</div></a><p class="title">' + section.section_info + "</p></div></section>", 
-                points = section.points;
-                for (var b = 0; b < points.length; b++) {
-                    if (point = points[b], "info" == point.type) {
+                section = result.sections[a], menu += '<li><a class="page-scroll ripple" href="#' + section.id + '" data-index="' + count + '">' + section.title + "</a></li>";
+                var main_point = document.createElement("section");
+                $(main_point).attr({
+                    id: section.id,
+                    "data-index": count,
+                    "class": "section main-point " + section.id
+                }).appendTo(main), css_style += json_to_css(".sections .section." + section.id, section.style.section);
+                var main_point_line = document.createElement("div");
+                $(main_point_line).attr({
+                    "class": "vertical-line"
+                }).appendTo(main_point), css_style += json_to_css(".sections .section." + section.id + " .vertical-line", {
+                    "background-color": section.style.vertical_line
+                });
+                var main_point_overlay = document.createElement("div");
+                $(main_point_overlay).attr({
+                    "class": "overlay"
+                }).html('<a href="#' + section.id + '-1" data-index="' + ++count + '" class="page-scroll point-mark"><div class="ripple">' + section.title + '</div></a><p class="title">' + section.desc + "</p>").appendTo(main_point), 
+                css_style += json_to_css(".sections .section." + section.id + " .overlay", {
+                    "background-color": void 0 != section.style.overlay ? section.style.overlay : ""
+                }), css_style += json_to_css(".sections .section." + section.id + " .point-mark > div", section.style.point_mark), 
+                css_style += json_to_css(".sections .section." + section.id + " .half > div:nth-child(odd)", {
+                    "background-color": section.style.odd_background_color
+                }), css_style += json_to_css(".sections .section." + section.id + " .half, .sections .section." + section.id + " .half > div:nth-child(even)", {
+                    "background-color": section.style.even_background_color
+                }), sub_sections = section.sub_sections;
+                for (var b = 0; b < sub_sections.length; b++) {
+                    if (sub_section = sub_sections[b], "info" == sub_section.type) {
                         var media = "";
-                        void 0 != point.video ? (point.video.src += "?rel=0&amp;wmode=transparent&amp;autoplay=1&amp;showinfo=0", 
-                        media = '<a class="modal-link video ' + point.video.type + '" href="' + point.video.src + '" target="_blank"><img src="' + point.video.cover_img + '"></a><div class="embed embed-' + point.video.aspect_ratio + '">\n                <iframe class="embed-item" src="' + point.video.src + '"></iframe>\n              </div>') : void 0 != point.image && (media = '<div class="image"><img src="' + point.image.src + '" class=""></div>'), 
-                        content = '<div class="' + point.type + '"><h3 class="title">' + point.title + '</h3><p class="desc">' + point.desc + '</p><div class="media">' + media + "</div></div>";
-                    } else "quotes" == point.type && (content = '<div class="' + point.type + '"><p class="quote">' + point.quote + '</p><div class="author-img img-circle text-center"><img src="' + point.author_img + '"></div><h3 class="text-center by-who">' + point.by_who + "</h3></div>");
-                    pov_timeline += '<section id="' + section.id + "-" + (b + 1) + '" data-index="' + count + '" class="section point ' + section.id + '"><div class="overlay"><a href="#' + section.id + "-" + (b + 2) + '" data-index="' + ++count + '" class="page-scroll point-mark"><div class="ripple">' + point.year + '</div></a><div class="half"><div class="cover-bg" style="background-image: url(\'' + point.bg_img + "');\"></div><div>" + content + "</div></div></div></section>";
+                        void 0 != sub_section.video && void 0 != sub_section.video.src && "" != sub_section.video.src ? (sub_section.video.src += "?rel=0&amp;wmode=transparent&amp;showinfo=0", 
+                        media = '<a class="modal-link video ' + sub_section.video.type + '" href="' + sub_section.video.src + '&amp;autoplay=1" target="_blank"><img src="' + sub_section.video.cover_img + '" alt=""></a><div class="embed embed-' + sub_section.video.aspect_ratio + '">\n                <iframe class="embed-item" src="' + sub_section.video.src + '&amp;autoplay=0"></iframe>\n              </div>') : void 0 != sub_section.image && void 0 != sub_section.image.src && "" != sub_section.image.src && (media = '<div class="image"><img src="' + sub_section.image.src + '" alt=""></div>'), 
+                        content = '<div class="' + sub_section.type + '"><h3 class="title">' + sub_section.title + '</h3><p class="desc">' + sub_section.desc + '</p><div class="media">' + media + "</div></div>";
+                    } else "quotes" == sub_section.type && (content = '<div class="' + sub_section.type + '"><p class="quote">' + sub_section.quote + '</p><div class="author-img img-circle text-center"><img src="' + sub_section.author_img + '"></div><h3 class="text-center by-who">' + sub_section.by_who + "</h3></div>");
+                    var sub_point = document.createElement("section");
+                    $(sub_point).attr({
+                        id: section.id + "-" + (b + 1),
+                        "data-index": count,
+                        "class": "section point " + section.id
+                    }).appendTo(main);
+                    var sub_point_line = document.createElement("div");
+                    $(sub_point_line).attr({
+                        "class": "vertical-line"
+                    }).appendTo(sub_point);
+                    var sub_point_overlay = document.createElement("div");
+                    $(sub_point_overlay).attr({
+                        "class": "overlay"
+                    }).html('<a href="#' + section.id + "-" + (b + 2) + '" data-index="' + ++count + '" class="page-scroll point-mark"><div class="ripple">' + sub_section.year + '</div></a><div class="half"><div class="cover-bg"></div><div>' + content + "</div></div>").appendTo(sub_point), 
+                    css_style += json_to_css(".sections .section#" + section.id + "-" + (b + 1) + " .half .cover-bg", {
+                        "background-image": "url('" + sub_section.bg_img + "')"
+                    });
                 }
             }
-            $("#pov-timeline").html(pov_timeline), $("#main-nav, #page-nav").html(menu), $(".youtube").colorbox({
+            $("#main-nav, #page-nav").html(menu), $("<style></style>").html(css_style).appendTo("head"), 
+            $(".youtube").colorbox({
                 opacity: .75,
                 iframe: !0,
                 innerWidth: 640,
@@ -75,14 +132,13 @@ function buildTimeline() {
 }(window, jQuery), $(function() {
     $(document).on("click", "a.page-scroll", function(event) {
         var page_index = $(this).data("index"), $anchor = $(this);
-        0 != $("body.disabled-onepage-scroll").length ? $("html, body").stop().animate({
+        0 != $("body.disabled-onepage-scroll").length ? ($("#menu-toggle").attr("checked", !1), 
+        $("html, body").stop().animate({
             scrollTop: $($anchor.attr("href")).offset().top
         }, 1500, "easeInOutExpo", function() {
             window.location.hash = page_index;
-        }) : (event.preventDefault(), window.location.hash = page_index, $(".sections").moveTo(page_index));
-    }), buildTimeline(), show_nav(), setTimeout(function() {
-        updateOncepagePagination();
-    }, 500), $(document).on("mousewheel DOMMouseScroll MozMousePixelScroll", function() {
+        })) : (event.preventDefault(), window.location.hash = page_index, $(".sections").moveTo(page_index));
+    }), buildTimeline(), show_nav(), $(document).on("mousewheel DOMMouseScroll MozMousePixelScroll", function() {
         show_nav();
     }), $("body").scrollspy({
         target: "#main-navbar"

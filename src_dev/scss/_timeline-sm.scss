@@ -26,9 +26,10 @@
 			}
 
 			.half{
-				@include flex();
+				@include display(flex);
 				@include flex-direction(column);
-			  @include flex-center();
+			  @include justify-content(center);
+				@include align-items(center);
 			  overflow: hidden;
 			  height: 100%;
 			  >div{

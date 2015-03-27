@@ -19,7 +19,7 @@
 	.section{
 		position: relative;
 		height: initial;
-		border-bottom: dashed 1px;
+		/*border-bottom: dashed 1px;*/
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		background-color: $bg-dark-odd;
@@ -31,7 +31,16 @@
 
 		&.point,
 		&.main-point{
-			@include vertical-line($vertical-line-odd);
+			.vertical-line{
+				position: absolute;
+				left: 32px;
+				top: 0px;
+				height: 100%;
+				width: 4px;
+				background-color: darken($vertical-line-odd, 20%);
+				z-index: 1;
+				@include shadow(2, box);
+			}
 
 			.overlay{
 				width: 100%;
@@ -54,9 +63,10 @@
 					color: $text-dark-odd;
 					@include body-font();
 					@include shadow(2, box);
-					@include flex();
-					@include flex-direction(row);
-					@include flex-center();
+				  @include display(flex);
+				  @include flex-direction(row);
+				  @include justify-content(center);
+					@include align-items(center);
 					@include transition(all .1s ease-in-out);
 				}
 			}
@@ -67,10 +77,11 @@
 			.overlay{
 				height: 100%;
 				padding: 90px 35px 35px;
-				background-color: rgba(0,0,0,0.15);
-				@include flex();
-				@include flex-direction(column);
-				@include flex-center();
+				background-color: rgba(0,0,0,0.2);
+			  @include display(flex);
+			  @include flex-direction(column);
+			  @include justify-content(center);
+				@include align-items(center);
 			}
 			.point-mark{
 				position: initial;
@@ -91,7 +102,13 @@
 				z-index: 2;
 			}
 		}
-
+		&.point{
+			.point-mark{
+				div{
+					font-weight: bold;
+				}
+			}
+		}
 		&.point:nth-child(odd){
 			background-color: $bg-light-odd;
 		}
@@ -182,8 +199,8 @@
 		.quotes{
 			text-align: center;
 			@include transition(all .3s ease-in-out);
-			@include flex();
-			@include flex-direction(row);
+		  @include display(flex);
+		  @include flex-direction(row);
 			@include flex-wrap(wrap);
 
 			.quote{
@@ -282,36 +299,47 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  @include transform(translateY(-50%));
 
 	li {
 	  padding: 0;
+	  margin: 0;
 	  text-align: center;
 	  a{
-		  padding: 12px;
-		  width: 0;
-		  height: 0;
+		  padding: 0;
+		  margin: 0;
+		  width: 30px;
+		  height: 20px;
 		  display: block;
 		  position: relative;
 
 		  &:before{
+			  padding: 0;
+			  margin: 0;
 			  content: '';
 			  position: absolute;
-			  width: 6px;
-			  height: 6px;
+			  @include size(6px);
 			  top: 50%;
-			  right: 50%;
-			  margin: (-6px/2) (-6px/2) 0px 0px;
-			  background: rgba(255,255,255,0.85);
+			  left: 50%;
+			  background: transparent;
+			  border: 3px solid rgba(255,255,255,0.85);
 			  @include css3(border-radius, 50%);
+			  @include transition(all 0.5s ease-in-out);
+  			@include transform(translate3d(-50%, -50%, 0));
+			}
+			&:hover:before{
+			  @include size(10px);
+			  @include transition(all 0.3s ease-in-out);
 			}
 			&.active:before{
-			  width: 12px;
-			  height: 12px;
-			  background: none;
-			  border: 1px solid #fff;
+			  padding: 0;
+			  margin: 0;
+			  margin-top: 0px;
 			  top: 50%;
-			  right: 50%;
-			  margin: (-12px/2) (-12px/2) 0px 0px;
+			  left: 50%;
+			  @include size(20px);
+			  border: 2px solid #fff;
+			  @include transition(all 0.7s ease-in-out);
 			}
 		  
 		}

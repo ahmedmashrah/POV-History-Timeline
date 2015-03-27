@@ -7,6 +7,7 @@ $(function() {
 		var page_index = $(this).data("index");
 		var $anchor = $(this);
 		if($('body.disabled-onepage-scroll').length!=0){
+			$('#menu-toggle').attr('checked', false);
 			 $('html, body').stop().animate({
 			 	scrollTop: $($anchor.attr('href')).offset().top
 			 }, 1500, 'easeInOutExpo', function(){
@@ -20,10 +21,6 @@ $(function() {
 	});
 	buildTimeline();
 	show_nav();
-	setTimeout(function(){
-		updateOncepagePagination();
-		// page_scroll();
-	}, 500);
 
 	$(document).on('mousewheel DOMMouseScroll MozMousePixelScroll', function(){show_nav();});
 

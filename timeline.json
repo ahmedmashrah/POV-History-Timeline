@@ -2,14 +2,35 @@
 	"logo": "src/img/pov-logo-white-transparent.png",
 	"sub_title": "Dive into our history",
 	"id": "time-home",
-	"bg_img": "",
+	"style": {
+		"section": {
+			"background-color": "#000",
+			"background-image": "url('http://www.pbs.org/pov/blog/wp-content/uploads/2015/02/2015season-648x330.jpg')",
+			"color": "#FFF"
+		},
+		"overlay": "rgba(0,0,0,0.7)"
+	},
 	"sections": [
 		{
-			"section_label": "1986-1992",
+			"title": "1986-1992",
 			"id": "time-8692",
-			"section_info": "A Test Bed for Storytelling & Dialogue Through Television",
-			"bg_img": "",
-			"points": [
+			"desc": "A Test Bed for Storytelling & Dialogue Through Television",
+			"style": {
+				"section": {
+					"background-color": "#03a9f4",
+					"background-image": "url('http://www.pbs.org/pov/blog/wp-content/uploads/2015/02/2015season-648x330.jpg')",
+					"color": "#FFF"
+				},
+				"overlay": "rgba(0,0,0,0.4)",
+				"vertical_line": "#00ecff",
+				"point_mark": {
+					"background-color": "#00BCD4",
+					"color": "#FFF"
+				},
+				"odd_background_color" : "#51b3de",
+				"even_background_color" : "#4987ac"
+			},
+			"sub_sections": [
 				{
 					"year": 1988,
 					"bg_img": "http://placehold.it/1000/333333",
@@ -48,10 +69,25 @@
 			]
 		},
 		{
-			"section_label": "1993-1998",
+			"title": "1993-1998",
 			"id": "time-9398",
-			"section_info": "Experiments in Viewer Engagement",
-			"points": [
+			"desc": "Experiments in Viewer Engagement",
+			"style": {
+				"section": {
+					"background-color": "#8155a4",
+					"background-image": "url('http://www.pbs.org/pov/blog/wp-content/uploads/2015/02/2015season-648x330.jpg')",
+					"color": "#FFF"
+				},
+				"overlay": "rgba(0,0,0,0.4)",
+				"vertical_line": "#ab47bc",
+				"point_mark": {
+					"background-color": "#ab47bc",
+					"color": "#FFF"
+				},
+				"odd_background_color" : "#8155a4",
+				"even_background_color" : "#4a477f"
+			},
+			"sub_sections": [
 				{
 					"year": 1993,
 					"bg_img": "http://placehold.it/1000/333333",
@@ -178,38 +214,97 @@
 			]
 		},
 		{
-			"section_label": "1999-2003",
-			"section_id": "time-",
-			"section_info": "",
-			"points": [
+			"title": "1999-2003",
+			"id": "time-9903",
+			"desc": "Digital Adolescence",
+			"style": {
+				"section": {
+					"background-color": "#CDDC39",
+					"background-image": "url('http://www.pbs.org/pov/blog/wp-content/uploads/2015/02/2015season-648x330.jpg')",
+					"color": "#FFF"
+				},
+				"overlay": "rgba(0,0,0,0.4)",
+				"vertical_line": "#FFC107",
+				"point_mark": {
+					"background-color": "#FFC107",
+					"color": "#000"
+				},
+				"odd_background_color" : "#def262",
+				"even_background_color" : "#74b35b"
+			},
+			"sub_sections": [
 				{
-					"year": 0,
+					"year": 1999,
 					"bg_img": "http://placehold.it/1000/333333",
 					"type": "info",
-					"title": "",
-					"desc": "",
-					"video": {
-						"src": "http://www.youtube.com/embed/LV8hj2Er9mM?rel=0&modestbranding=1&showinfo=0",
-						"cover_img": "http://placehold.it/640x390/333333",
-						"type": "youtube",
-						"aspect_ratio": "4by3"
+					"title": "Film Campaigns",
+					"desc": "Under new Executive Director Cara Mertes, POV produces full campaigns for all of its films, not the just selections each season. Often contending with a tight deadlines — the time from acquisition to broadcast may be a few months — POV begins creating pre-licensed film clips for educators (a first for public television), downloadable lesson plans, \"delve deeper\" resources and interactive features."
+				},
+				{
+					"year": 2003,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "You Saw Them On POV First",
+					"desc": "Edward Snowden interviewer Laura Poitras (Flag Wars, 2003; a POV Diverse Voices Project grantee for emerging filmmakers), double-Oscar nominee Marshall Curry (Street Fight, 2005)"
+				},
+				{
+					"year": 2003,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "quotes",
+					"by_who": "Cara Mertes, Executive Director, 1999-2006",
+					"quote": "I felt the time was right culturally to expand [POV] in every way, from production to distribution, education and outreach, and interactively. Not just to reach audience, but to engage existing audiences and endeavor to create new ones.",
+					"author_img": "src/img/cara-mertes-circle-120.png"
+				},
+				{
+					"year": 2002,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "By the Numbers",
+					"desc": "In 2002, for the first time, more than half of Americans now had access to the Internet."
+				},
+				{
+					"year": 2002,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "POV Borders",
+					"desc": "POV launches PBS's first web-only original series, POV Borders: Migration, in 2002, as a showcase for interactive storytelling. It pioneers a new form of public dialogue — one in which user interaction with creatively documented individual and community stories becomes the primary language for exploring how we live our lives today. Two chapters followed: Environment (2004), named one of Time's best websites of the year and winner of a Webby Award, and American ID (2006), which examines perceptions of the United States.",
+					"image": {
+						"src": "http://www.pbs.org/pov/about/history/media/borders-migration-340.png"
 					}
 				},
 				{
-					"year": 0,
+					"year": 2003,
 					"bg_img": "http://placehold.it/1000/333333",
-					"type": "quotes",
-					"by_who": "",
-					"quote": "",
-					"author_img": "http://placehold.it/100/333333"
+					"type": "info",
+					"title": "Two Towns of Jasper",
+					"desc": "In 2003, a ground-breaking partnership between multiple broadcasters — PBS, ABC and Oprah — also harnesssed the power of the web. On January 22, POV aired Two Towns of Jasper, a film by two filmmakers, one white and one black, about a modern-day lynching in Texas. Web TV viewers interacted with each other and retrieved a wealth of context in real time. The previous day, the filmmakers were guests on Oprah. The following day, Ted Koppel (Nightline) hosted a town hall in Jasper using data from the live screening. Over three nights, 20 million people experienced the power of independent media.",
+					"image": {
+						"src": "http://www.pbs.org/pov/about/history/media/koppel-two-towns-340.png"
+					}
 				}
 			]
 		},
 		{
-			"section_label": "2004-2011",
-			"section_id": "time-0411",
-			"section_info": "Social Networks and Web 2.0",
-			"points": [
+			"title": "2004-2011",
+			"id": "time-0411",
+			"desc": "Social Networks and Web 2.0",
+			"style": {
+				"section": {
+					"background-color": "#5a99b3",
+					"background-image": "url('http://www.pbs.org/pov/blog/wp-content/uploads/2015/02/2015season-648x330.jpg')",
+					"color": "#FFF"
+				},
+				"overlay": "rgba(0,0,0,0.5)",
+					"background-color": "#",
+				"vertical_line": "#b5da9b",
+				"point_mark": {
+					"background-color": "#b5da9b",
+					"color": "#000"
+				},
+				"odd_background_color" : "#68b4c3",
+				"even_background_color" : "#5a99b3"
+			},
+			"sub_sections": [
 				{
 					"year": 2009,
 					"bg_img": "http://placehold.it/1000/333333",
@@ -217,34 +312,135 @@
 					"title": "The Webby Awards",
 					"desc": "POV Interactive is nominated for its sixth Webby Award in six years in 2009, competing against cable networks and Hollywood film sites for awards that recognize online excellence.",
 					"image": "http://placehold.it/1000/333333"
+				},
+				{
+					"year": 2004,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "Water is the new oil",
+					"desc": "POV won a Webby Award for the Environment chapter of POV Borders, but because a ceremony was not held in 2004, no five-word acceptance speeches were heard. This would have been POV's.",
+					"image": "http://www.pbs.org/pov/about/history/media/pov-logo-quote-circle-120.png"
 				}
 			]
 		},
 		{
-			"section_label": "2012-2015",
-			"section_id": "time-",
-			"section_info": "",
-			"points": [
+			"title": "2012-2015",
+			"id": "time-1215",
+			"desc": "Hacking the Documentary",
+			"style": {
+				"section": {
+					"background-color": "#e9642f",
+					"background-image": "url('http://www.pbs.org/pov/blog/wp-content/uploads/2015/02/2015season-648x330.jpg')",
+					"color": "#FFF"
+				},
+				"overlay": "rgba(0,0,0,0.5)",
+				"vertical_line": "#ff957d",
+				"point_mark": {
+					"background-color": "#ff957d",
+					"color": "#000"
+				},
+				"odd_background_color" : "#e9642f",
+				"even_background_color" : "#e86656"
+			},
+			"sub_sections": [
 				{
-					"year": 0,
+					"year": 2012,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "For Filmmakers",
+					"desc": "Building on a tradition of supporting filmmakers dating back to its earliest days, POV re-launches a behind-the-scenes subsite as For Filmmakers, a resource for producing both traditional and new-format documentaries. The subsite connects to 25 years of filmmaker interviews and POV's Documentary Blog, which establishes itself as a leading hub for conversation, with spokes on social media sites such as Facebook and Twitter.",
+					"image": {
+						"src": "http://www.pbs.org/pov/blog/wp-content/uploads/2013/05/pov-for-filmmakers.jpg"
+					}
+				},
+				{
+					"year": 2012,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "Creative Collaboration at POV Hackathon",
+					"desc": "The POV Hackathon lab series marks the new ways media makers are approaching nonfiction. Documentaries are no longer informed by Flaherty, Grierson or the Drew Associates, but also Jobs, Ogilvy and Zuckerberg — which is to say that software developers, entrepreneurs and advertisers are providing insights into how independent nonfiction media can thrive in a digitally connected world.",
+					"video": {
+						"src": "http://www.youtube.com/embed/rICFHBzosRs",
+						"cover_img": "http://placehold.it/640x390/333333",
+						"type": "youtube",
+						"aspect_ratio": "16by9"
+					}
+				},
+				{
+					"year": 2015,
 					"bg_img": "http://placehold.it/1000/333333",
 					"type": "quotes",
-					"by_who": "",
-					"quote": "",
+					"by_who": "Adnaan Wasey, Executive Producer, POV Digital (2012-present)",
+					"quote": "As we've evolved from chat rooms to multimedia websites to social media, our digital philosophy hasn't changed. We are continuing to leverage technology to explore how to tell stories, how to engage audiences and how to support communities connected to those stories.",
 					"author_img": "http://placehold.it/100/333333"
 				},
 				{
-					"year": 0,
+					"year": 2012,
 					"bg_img": "http://placehold.it/1000/333333",
 					"type": "info",
-					"title": "",
-					"desc": "",
-					"video": {
-						"src": "",
-						"cover_img": "http://placehold.it/640x390/333333",
-						"type": "youtube",
-						"aspect_ratio": "4by3"
+					"title": "POV Hackathon: Living Los Sures",
+					"desc": "A collaboratively produced interactive documentary that explores the legacy of urban poverty on the increasingly trendy south side of Brooklyn's Williamsburg neighborhood.",
+					"image": {
+						"src": "src/img/living.jpg"
 					}
+				},
+				{
+					"year": 2013,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "POV Hackathon: Empire",
+					"desc": "Empire unearths the contemporary aftershocks of the world's first brush with global capitalism through a broad range of storytelling techniques — including nonfiction filmmaking, multi-channel video projection, and experience design.",
+					"image": {
+						"src": "src/img/empire-800.png"
+					}
+				},
+				{
+					"year": 2013,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "POV Hackathon: Unknown Spring",
+					"desc": "A chronicle of and testament to the Japanese people's resilience and humanity in the face of unspeakable odds.",
+					"image": {
+						"src": "src/img/unknown-spring-800.png"
+					}
+				},
+				{
+					"year": 2013,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "POV Hackathon: The Whiteness Project",
+					"desc": "The Whiteness Project is a cross-platform investigation by Whitney Dow, one of the two directors of Two Towns of Jasper, into how white Americans experience their ethnicity.",
+					"image": {
+						"src": "src/img/whiteness.jpg"
+					}
+				},
+				{
+					"year": 2013,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "POV Hackathon: Portraits of the Enemies",
+					"desc": "A web-based documentary that juxtaposes portraits of enemy fighters face-to-face by international photojournalist Karim Ben Khelifa.",
+					"image": {
+						"src": "src/img/portraits-800.jpg"
+					}
+				},
+				{
+					"year": 2014,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "info",
+					"title": "The Reportero Challenge",
+					"desc": "POV Borders segment producer Bernardo Ruiz returned to POV 10 years later as the director of his own film. The 2013 documentary Reportero, about the plight of journalists in Mexico, also spawned a POV game, The Reportero Challenge. Do you have what it takes to be a Mexican newspaper editor? Take the challenge!",
+					"image": {
+						"src": "src/img/reportero-challenge-800.png"
+					}
+				},
+				{
+					"year": 2015,
+					"bg_img": "http://placehold.it/1000/333333",
+					"type": "quotes",
+					"by_who": "Simon Kilmurry, Executive Director & Executive Producer (2006-present)",
+					"quote": "[POV] remains remarkably true to its founding mission, which is to support independent documentary makers, to help them find a space within culture at large, and to work with audiences and communities on how these films illuminate larger issues in a more granular way.",
+					"author_img": "src/img/simon-kilmurry-quote-circle-120.png"
 				}
 			]
 		}
