@@ -1,18 +1,18 @@
 .sections{
 
-	.section{
-		/* Home section style */
-		&.time-home{
-			background-color: #000;
-			background-image: url('http://www.pbs.org/pov/blog/wp-content/uploads/2015/02/2015season-648x330.jpg');
-			background-position: center;
-			background-repeat: no-repeat;
-			color: #fff;
-			.overlay{
-				/*background-color: rgba(0,0,0,0.5);*/
-			}
-		}
+  .section{
+    /* Home section style */
+    &.time-home{
+      background-color: #000;
+      background-image: url('http://www.pbs.org/pov/blog/wp-content/uploads/2015/02/2015season-648x330.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff;
+      .overlay{
+        /*background-color: rgba(0,0,0,0.5);*/
+      }
+    }
 
 
-	}
+  }
 }

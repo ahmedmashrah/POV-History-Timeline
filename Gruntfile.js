@@ -65,6 +65,6 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	
 	// Default task(s).
-	grunt.registerTask('default', ['compass:dev', 'uglify:dev']);
+	grunt.registerTask('default', ['compass:prod', 'uglify:prod']);
 	// , 'watch'
 };

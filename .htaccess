@@ -1,0 +1,326 @@
+ErrorDocument 404 /pov/discover/page_not_found.php
+
+AddType video/mp4 .mp4 .m4v
+AddType video/ogg .ogv
+AddType video/webm .webm
+
+# top level
+# Redirect 301 /pov/index.html http://www.pbs.org/pov
+Redirect 301 /pov/mainmenu.html http://www.pbs.org/pov/
+Redirect 301 /pov/huffpo.php http://www.pbs.org/pov/
+
+
+# video
+# Redirect 301 /pov/video http://www.pbs.org/pov/video/search.php?search_type=film&cat=full_length&sort_type=recent
+Redirect 301 /pov/videos.html http://www.pbs.org/pov/discover/
+Redirect 301 /pov/videos_povreel.html http://www.pbs.org/pov/about/
+Redirect 301 /pov/about/pov-reel.php http://www.pbs.org/pov/about/
+RedirectMatch 301 /pov/talkingback_videoletter.php http://www.pbs.org/pov/video/search.php?search_type=type\&cat=viewer_created
+Redirect 301 /pov/emmys http://www.pbs.org/pov/video/
+Redirect 301 /pov/sneakpreviews http://www.pbs.org/pov/about/mobile-selects.php
+Redirect 301 /pov/butterfly/butterfly.php http://www.pbs.org/pov/butterfly/full.php
+Redirect 301 /pov/butterfly/watch.php http://www.pbs.org/pov/butterfly/full.php
+Redirect 301 /pov/mostdangerousman/watch.php http://www.pbs.org/pov/mostdangerousman/full.php
+Redirect 301 /pov/woainimommy/watch.php http://www.pbs.org/pov/woainimommy/full.php
+Redirect 301 /pov/trashout/watch.php http://www.pbs.org/pov/trashout/full.php
+Redirect 301 /pov/chajunghee/watch.php http://www.pbs.org/pov/chajunghee/full.php
+Redirect 301 /pov/girlslikeus/full_film.php http://www.pbs.org/pov/girlslikeus/full.php
+Redirect 301 /pov/girlslikeus/watch.php http://www.pbs.org/pov/girlslikeus/full.php
+Redirect 301 /pov/seltzerworks/watch.php http://www.pbs.org/seltzerworks/full.php
+Redirect 301 /pov/thirst/watch.php http://www.pbs.org/pov/thirst/full.php
+Redirect 301 /pov/thirst/photo_gallery_watch.php http://www.pbs.org/pov/thirst/full.php
+Redirect 301 /pov/hybrid/watch.php http://www.pbs.org/pov/hybrid/full.php
+Redirect 301 /pov/hybrid/photo_gallery_watch.php http://www.pbs.org/pov/hybrid/full.php
+Redirect 301 /pov/takingonthekennedys/watch.php http://www.pbs.org/pov/takingonthekennedys/full.php
+Redirect 301 /pov/shelbyknox/watch.php http://www.pbs.org/pov/shelbyknox/full.php
+Redirect 301 /pov/presumedguilty/watch.php http://www.pbs.org/pov/presumedguilty/full.php
+Redirect 301 /pov/oath/watch.php http://www.pbs.org/pov/oath/full.php
+Redirect 301 /pov/thearchive/watch.php http://www.pbs.org/pov/thearchive/full.php
+Redirect 301 /pov/dannyandannie/watch.php http://www.pbs.org/pov/dannyandannie/full.php
+Redirect 301 /pov/foodinc/watch.php http://www.pbs.org/pov/foodinc/full.php
+Redirect 301 /pov/foodinc/photo_gallery_watch.php http://www.pbs.org/pov/foodinc/full.php
+Redirect 301 /pov/senoritaextraviada/watch.php http://www.pbs.org/pov/senoritaextraviada/full.php
+Redirect 301 /pov/thesweetestsound/watch.php http://www.pbs.org/pov/thesweetestsound/full.php
+Redirect 301 /pov/edgeofdreaming/watch.php http://www.pbs.org/pov/edgeofdreaming/full.php
+Redirect 301 /pov/firstpersonplural/watch.php http://www.pbs.org/pov/firstpersonplural/full.php
+Redirect 301 /pov/waywegetby/watch.php http://www.pbs.org/pov/waywegetby/full.php
+Redirect 301 /pov/alice/watch.php http://www.pbs.org/pov/alice/full.php
+Redirect 301 /pov/notesonmilk/photo_gallery_watch.php http://www.pbs.org/pov/notesonmilk/full.php
+Redirect 301 /pov/notesonmilk/watch.php http://www.pbs.org/pov/notesonmilk/full.php
+Redirect 301 /pov/beachesofagnes/photo_gallery_watch.php http://www.pbs.org/pov/beachesofagnes/full.php
+Redirect 301 /pov/beachesofagnes/watch.php http://www.pbs.org/pov/beachesofagnes/full.php
+Redirect 301 /pov/salt/photo_gallery_watch.php http://www.pbs.org/pov/salt/full.php
+Redirect 301 /pov/elgeneral/photo_gallery_watch.php http://www.pbs.org/pov/elgeneral/full.php
+Redirect 301 /pov/goodfortune/photo_gallery_watch.php http://www.pbs.org/pov/goodfortune/full.php
+Redirect 301 /pov/bye/photo_gallery_watch.php http://www.pbs.org/pov/bye/full.php
+Redirect 301 /pov/promisedland/photo_gallery_watch.php http://www.pbs.org/pov/promisedland/full.php
+Redirect 301 /pov/disturbingtheuniverse/photo_gallery_watch.php http://www.pbs.org/pov/disturbingtheuniverse/full.php
+Redirect 301 /pov/bronxprincess/watch_the_film.php http://www.pbs.org/pov/bronxprincess/full.php
+Redirect 301 /pov/principalstory/watch_the_film.php http://www.pbs.org/pov/principalstory/full.php
+Redirect 301 /pov/reckoning/watch_the_film.php http://www.pbs.org/pov/reckoning/full.php
+Redirect 301 /pov/englishsurgeon/watch_the_film.php http://www.pbs.org/pov/englishsurgeon/full.php
+Redirect 301 /pov/criticalcondition/watch_the_film.php http://www.pbs.org/pov/criticalcondition/full.php
+Redirect 301 /pov/holdmetight/watch_the_film.php http://www.pbs.org/pov/holdmetight/full.php
+Redirect 301 /pov/beyondhatred/watch_the_film.php http://www.pbs.org/pov/beyondhatred/full.php
+Redirect 301 /pov/newmuslimcool/watch_the_film.php http://www.pbs.org/pov/newmuslimcool/full.php
+Redirect 301 /pov/lifesupportmusic/watch_the_film.php http://www.pbs.org/pov/lifesupportmusic/full.php
+Redirect 301 /pov/campaign/watch_the_film.php http://www.pbs.org/pov/campaign/full.php
+Redirect 301 /pov/campaign/watch_the_film.php http://www.pbs.org/pov/campaign/full.php
+Redirect 301 /pov/campaign/campaign_fullfilm1.php http://www.pbs.org/pov/campaign/full.php
+Redirect 301 /pov/campaign/campaign_fullfilm2.php http://www.pbs.org/pov/campaign/full.php
+Redirect 301 /pov/campaign/campaign_fullfilm3.php http://www.pbs.org/pov/campaign/full.php
+Redirect 301 /pov/campaign/campaign_fullfilm4.php http://www.pbs.org/pov/campaign/full.php
+
+
+# cee and outreach
+Redirect 301 /pov/outreach/index.html http://www.pbs.org/pov/outreach/index.php
+Redirect 301 /pov/outreach/events http://www.amdoc.org/outreach_news.php
+Redirect 301 /pov/events http://www.pbs.org/pov/outreach/
+
+# podcasts
+Redirect 301 /pov/podcast.html http://www.pbs.org/pov/podcasts.php
+Redirect 301 /pov/podcasts http://www.pbs.org/pov/podcasts.php
+
+# newsletter
+Redirect 301 /pov/newsletter.html http://www.pbs.org/pov/about/newsletter.php
+RedirectMatch 301 /pov/unsub http://www.pbs.org/pov/about/newsletter_unsubscribe.php
+Redirect 301 /pov/unsubscribe.html http://www.pbs.org/pov/about/newsletter_unsubscribe.php
+Redirect 301 /pov/newsletter http://www.pbs.org/pov/about/newsletter.php
+
+# social
+Redirect 301 /pov/facebook http://www.facebook.com/povdocs/
+Redirect 301 /pov/youtube http://www.youtube.com/povdocs
+
+# reminders
+Redirect 301 /pov/reminder.php http://www.pbs.org/pov/tvschedule/reminder-single.php
+Redirect 301 /pov/reminder_multi.php http://www.pbs.org/pov/tvschedule/reminder-multi.php
+Redirect 301 /pov/reminder_multi_announce.php http://www.pbs.org/pov/tvschedule/reminder-multi.php
+Redirect 301 /pov/remindme.html http://www.pbs.org/pov/tvschedule/reminder-single.php
+RedirectMatch 301 /pov/remind http://www.pbs.org/pov/about
+
+# pledge
+Redirect 301 /pov/pledge.html http://www.pbs.org/pov/
+
+# contact and talkback
+Redirect 301 /pov/contactus.html http://www.pbs.org/pov/about/contactus.php
+Redirect 301 /pov/talkingback.html http://www.pbs.org/pov/blog/
+RedirectMatch 301 /pov/talkingback http://www.pbs.org/pov/blog/
+Redirect 301 /pov/talkingback_tapestry.html http://www.pbs.org/pov/blog/
+
+# about
+Redirect 301 /pov/credits.html http://www.pbs.org/pov/about
+RedirectMatch 301 /pov/youthviews http://www.pbs.org/pov/about
+Redirect 301 /pov/local_broadcast.html http://www.pbs.org/pov/tvschedule
+Redirect 301 /pov/about/american-promise-premiere-party-draft.php http://www.pbs.org/pov/about/premiere-party.php
+
+# film page redirects
+Redirect 301 /pov/films http://www.pbs.org/pov/discover/
+RedirectMatch 301 /pov/49up http://www.pbs.org/pov/fortynineup/
+RedirectMatch 301 /pov/imcarolynparker http://www.pbs.org/pov/carolynparker/
+RedirectMatch 301 /pov/thecitydark http://www.pbs.org/pov/citydark/
+RedirectMatch 301 /pov/wrestling http://www.pbs.org/pov/tonykushner/
+RedirectMatch 301 /pov/lawintheseparts http://www.pbs.org/pov/thelawintheseparts/
+Redirect 301 /pov/geniusof http://www.pbs.org/pov/geniusofmarian
+
+RedirectMatch 301 /pov/tapestry http://www.pbs.org/pov/discover/
+Redirect 301 /pov/tellafriend.html http://www.pbs.org/pov/take_action/interact.php
+Redirect 301 /pov/tvschedule.html http://www.pbs.org/pov/tvschedule
+Redirect 301 /pov/tvschedule.php http://www.pbs.org/pov/tvschedule
+RedirectMatch 301 /pov/totk http://www.pbs.org/pov/takingonthekennedys
+RedirectMatch 301 /pov/whyvote http://www.pbs.org/pov/pov2008/election
+RedirectMatch 301 /pov/election/ http://www.pbs.org/pov/pov2008/election
+RedirectMatch 301 /pov/classroom.php http://www.pbs.org/pov/educators/
+RedirectMatch 301 /pov/shorts/shorts_arsmagna.html http://www.pbs.org/pov/arsmagna/
+
+# pressroom and pressroom photos
+RedirectMatch 301 /pov/utils/pressroom2000 http://www.amdoc.org/pressroom.php
+RedirectMatch 301 /pov/utils/pressroom2001 http://www.amdoc.org/pressroom.php
+RedirectMatch 301 /pov/utils/pressroom2002 http://www.amdoc.org/pressroom.php
+RedirectMatch 301 /pov/utils/pressroom2003 http://www.amdoc.org/pressroom.php
+RedirectMatch 301 /pov/utils/pressroom2004 http://www.amdoc.org/pressroom.php
+RedirectMatch 301 /pov/utils/pressroom http://www.amdoc.org/pressroom.php
+RedirectMatch 301 /pov/utils/press http://www.amdoc.org/pressroom.php
+Redirect 301 /pov/povlogos http://www.pbs.org/pov/pressroom/pov-logos.php
+Redirect 301 /pov/webby http://www.pbs.org/pov/pressroom/pov-logos.php
+Redirect 301 /pov/press http://www.pbs.org/pov/pressroom
+Redirect 301 /pov/pressroom/downloads/2014-season-announcement-documentary-films-full_pdf_download_0.pdf http://www.pbs.org/pov/pressroom/downloads/2014/pov-2014-season-27-lineup-announcement-20140407.pdf
+Redirect 301 /pov/pressroom/downloads/pov-2014-season-27-lineup-announcement-20140407.pdf http://www.pbs.org/pov/pressroom/downloads/2014/pov-2014-season-27-lineup-announcement-20140408.pdf
+Redirect 301 /pov/pressroom/downloads/pov-2014-season-27-lineup-announcement-20140408.pdf http://www.pbs.org/pov/pressroom/downloads/2014/pov-2014-season-27-lineup-announcement-20140501.pdf
+Redirect 301 /pov/pressroom/downloads/2014/pov-2014-season-27-lineup-announcement-20140501.pdf http://www.pbs.org/pov/pressroom/downloads/2014/pov-2014-season-27-lineup-announcement-20140521.pdf
+Redirect 301 /pov/pressroom/downloads/2014/pov-abnormal-premieres-july-14-pbs-20140501.pdf http://www.pbs.org/pov/pressroom/downloads/2014/pov-abnormal-premieres-july-14-pbs-20140620.pdf
+Redirect 301 /pov/pressroom/2014/bigmen/general_press_release.php http://www.pbs.org/pov/pressroom/2014/bigmen-premieres-on-pov-pbs.php
+Redirect 301 /pov/downloads/2014/2014-pov-logo-bed-fledgling.jpg http://www.pbs.org/pov/images/2014-pov-logo-bed-fledgling.jpg
+
+# voicescape
+Redirect 301 /pov/filmmakers/voicescape.php http://www.pbs.org/pov/voicescape/
+Redirect 301 /pov/voicescape/2011/bidhya-dhakal-jalisa-edwards-armando-emery-indra-karki-raul-ortega-lal-thapa-xiuhua-zheng-oakland-ca.php http://www.pbs.org/pov/voicescape/2011/damari-lawrence-lal-thapa-jyoti-gurung-oakland-calif.php
+
+# new backgrounds and photo galleries
+Redirect 301 /pov/mostdangerousman/background.php http://www.pbs.org/pov/mostdangerousman/photo_gallery_background.php
+Redirect 301 /pov/oath/background.php http://www.pbs.org/pov/oath/photo_gallery_background.php
+Redirect 301 /pov/brotheroutsider/special_march.php http://www.pbs.org/pov/brotheroutsider/photo_gallery_special_march.php
+
+# bad lesson plans links
+Redirect 301 /pov/tintinandi/pdf/pov_tintinandi_dd.pdf http://www.pbs.org/pov/film-files/pov_tintinandi_dd_reading_list_0.pdf
+Redirect 301 /pov/pov2006/tintinandi/pdf/pov_tintinandi_dd.pdf http://www.pbs.org/pov/film-files/pov_tintinandi_dd_reading_list_0.pdf
+Redirect 301 /pov/twotownsofjasper/lessonplan2.php http://www.pbs.org/pov/twotownsofjasper/lesson2.php
+
+
+#old utils
+Redirect 301 /pov/utils/aboutamerican.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_aufderheide.pdf http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_awards.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_critical.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_director.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_faq.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_history.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_history02.ahtml http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_history02.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_history02a.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_history03.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_history03_new.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_howto.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_new.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_resources.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_whatwedo.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/callforentries.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/callforentries_dvp.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/dvp.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/dvp_films.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/forproducers-cfe.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/forproducers.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/forproducers_CFE_reminder.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/forproducers_cfe2006.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/forproducers_nocfe.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/forproducers_resources.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/youthviews.html http://www.pbs.org/pov/about/
+RedirectMatch 301 /pov/utils/youthviews http://www.pbs.org/pov/about/
+RedirectMatch 301 /pov/utils http://www.pbs.org/pov/about
+
+# educators
+Redirect 301 /pov/educators/delve-deeper.php http://www.pbs.org/pov/educators/lesson-plans.php
+Redirect 301 /pov/engage http://www.pbs.org/pov/outreach/
+
+#filmmakers
+Redirect 301 /pov/filmmakers/hackathon.php http://www.pbs.org/pov/hackathon
+Redirect 301 /pov/filmmakers/diy-distribution-platforms.php http://www.pbs.org/pov/filmmakers/diy-digital-distribution-platforms.php
+Redirect 301 /pov/filmmakers/filmmaker-interviews.php http://www.pbs.org/pov/video/search.php?search_type=filmmaker_interviews
+Redirect 301 /pov/filmmakers/production-journals.php http://www.pbs.org/pov/video/search.php?search_type=filmmaker_interviews
+
+# film features that have been moved
+Redirect 301 /pov/thefluteplayer/special_instr_aek.html http://www.pbs.org/pov/thefluteplayer/instruments.php
+Redirect 301 /pov/thefluteplayer/special_instr_khimm.html http://www.pbs.org/pov/thefluteplayer/instruments.php
+Redirect 301 /pov/thefluteplayer/special_instr_khloy.html http://www.pbs.org/pov/thefluteplayer/instruments.php
+Redirect 301 /pov/myreincarnation/deleted-scenes.php http://www.pbs.org/pov/myreincarnation/additional-video.php
+Redirect 301 /pov/elvelador/essay-excerpts-man-his-tuba-jose-luis-bobadilla.php http://www.pbs.org/pov/elvelador/essay-excerpts.php
+Redirect 301 /pov/pressroom/downloads//pov-girlmodel-pressrelease_pdf_download_0.pdf http://www.pbs.org/pov/pressroom/downloads/girl-model-documentary-pov-pbs-press-release_pdf_download_0.pdf
+Redirect 301 /pov/featured-theme-asianpacific-american-heritage.php http://www.pbs.org/pov/educators/asian-pacific-american-heritage-month-lesson-plans.php
+Redirect 301 /pov/granito/watch-granito-online http://www.pbs.org/pov/granito/watch-granito-online.php
+Redirect 301 /pov/onlytheyoung/high_school_soundtrack http://www.pbs.org/pov/onlytheyoung/my-high-school-soundtrack.php
+Redirect 301 /pov/xoxosms/infographic.php http://www.pbs.org/pov/xoxosms/technology-dating-infographic.php
+Redirect 301 /pov/pressroom/downloads/neurotypical_press_release-final_1_pdf_download_0.pdf http://www.pbs.org/pov/pressroom/downloads/neurotypical_press_release-final_1_pdf_download_0_2.pdf
+Redirect 301 /pov/pressroom/downloads/neurotypical_press_release-final_1_pdf_download_0_1.pdf http://www.pbs.org/pov/pressroom/downloads/neurotypical_press_release-final_1_pdf_download_0_2.pdf
+Redirect 301 /pov/film-files/thiswayup_dg_action_discussion_file_0_1.pdf http://www.pbs.org/pov/film-files/thiswayup_dg_action_discussion_file_0_1_1.pdf
+Redirect 301 /pov/blog/povdocs/2013/07/pov-hackathon-3-prototypes/ http://www.pbs.org/pov/blog/povdocs/2013/07/pov-hackathon-4-prototypes/
+Redirect 301 /pov/pressroom/2013/theyve_been_filmed_every_seven_years_since_1964_now_the_kids_are_56_up_premiering_on_pov_monday_oct.php http://www.pbs.org/pov/pressroom/2013/56-up-premiere-pov-pbs-indies-showcase.php
+Redirect 301 /pov/pressroom/2013/inner-city_junior_high_school_defies_the_odds_to_become_national_chess_powerhouse_in_povs_brooklyn_c.php http://www.pbs.org/pov/pressroom/2013/brooklyn-castle-premiere-pov-pbs-indies-showcase.php
+Redirect 301 /pov/blog/docsoup/2013/07/neurotypical-vs-jenny-mccarthy-for-the-autism-soapbox http://www.pbs.org/pov/blog/docsoup/2013/08/neurotypical-vs-jenny-mccarthy-for-the-autism-soapbox/
+Redirect 301 /pov/wheresoldierscomefrom/discussion_guide.php http://www.pbs.org/pov/wheresoldierscomefrom/discussion-guide.php
+Redirect 301 /pov/lasttrainhome/discussion_guide.php http://www.pbs.org/pov/lasttrainhome/discussion-guide.php
+Redirect 301 /pov/learning/discussion_guide.php http://www.pbs.org/pov/learning/discussion-guide.php
+Redirect 301 /pov/ifatreefalls/discussion_guide.php http://www.pbs.org/pov/ifatreefalls/discussion-guide.php
+Redirect 301 /pov/betterthisworld/discussion_guide.php http://www.pbs.org/pov/betterthisworld/discussion-guide.php
+Redirect 301 /pov/armadillo/discussion_guide.php http://www.pbs.org/pov/armadillo/discussion-guide.php
+Redirect 301 /pov/steamoflife/discussion_guide.php http://www.pbs.org/pov/steamoflife/discussion-guide.php
+Redirect 301 /pov/mugabe/discussion_guide.php http://www.pbs.org/pov/mugabe/discussion-guide.php
+Redirect 301 /pov/enemies/discussion_guide.php http://www.pbs.org/pov/enemies/discussion-guide.php
+Redirect 301 /pov/biblioburro/discussion_guide.php http://www.pbs.org/pov/biblioburro/discussion-guide.php
+Redirect 301 /pov/myperestroika/discussion_guide.php http://www.pbs.org/pov/myperestroika/discussion-guide.php
+Redirect 301 /pov/sweetgrass/discussion_guide.php http://www.pbs.org/pov/sweetgrass/discussion-guide.php
+Redirect 301 /pov/kingsofpastry/discussion_guide.php http://www.pbs.org/pov/kingsofpastry/discussion-guide.php
+Redirect 301 /pov/oath/discussion_guide.php http://www.pbs.org/pov/oath/discussion-guide.php
+Redirect 301 /pov/chajunghee/discussion_guide.php http://www.pbs.org/pov/chajunghee/discussion-guide.php
+Redirect 301 /pov/offandrunning/discussion_guide.php http://www.pbs.org/pov/offandrunning/discussion-guide.php
+Redirect 301 /pov/woainimommy/discussion_guide.php http://www.pbs.org/pov/woainimommy/discussion-guide.php
+Redirect 301 /pov/mostdangerousman/discussion_guide.php http://www.pbs.org/pov/mostdangerousman/discussion-guide.php
+Redirect 301 /pov/lostboysofsudan/discussion_guide.php http://www.pbs.org/pov/lostboysofsudan/discussion-guide.php
+Redirect 301 /pov/sierraleone/discussion_guide.php http://www.pbs.org/pov/sierraleone/discussion-guide.php
+Redirect 301 /pov/film-files/hermans_house_fact_sheet-final_press_file_2.pdf http://www.pbs.org/pov/film-files/hermans_house_fact_sheet-final_press_file_2_1.pdf
+
+Redirect 301 /pov/wilmoth/ http://www.pbs.org/pov/agoodman/
+Redirect 301 /pov/wilmoth/index.php http://www.pbs.org/pov/agoodman/index.php
+Redirect 301 /pov/storycorps/bryan-and-mike-wilmoth.php http://www.pbs.org/pov/storycorps/a-good-man.php
+
+Redirect 301 /pov/geniusofmarian/cme_accreditation_registration.php http://www.pbs.org/pov/geniusofmarian/cme_accreditation.php
+Redirect 301 /pov/geniusofmarian/cme_accreditation_objectives.php http://www.pbs.org/pov/geniusofmarian/cme_accreditation.php
+Redirect 301 /pov/geniusofmarian/cme_credits.php http://www.pbs.org/pov/geniusofmarian/cme_accreditation.php
+Redirect 301 /pov/whitenessproject http://www.whitenessproject.org
+Redirect 301 /pov/livinglossures http://89.lossur.es
+
+Redirect 301 /pov/downloads/2014/after-tiller-signature-image-561x275.jpg http://www.pbs.org/pov/film-images/after-tiller-signature-image-561x275.jpg
+Redirect 301 /pov/downloads/2014/after_tiller_poster.jpg http://www.pbs.org/pov/film-images/after_tiller_poster.jpg
+Redirect 301 /pov/downloads/2014/pov-aworldnotours-discussion-image.jpg http://www.pbs.org/pov/film-images/pov-aworldnotours-discussion-image_action_discussion_image_0.jpg
+Redirect 301 /pov/downloads/2014/pov-bigmen-discussion-guide-image.jpg http://www.pbs.org/pov/film-images/pov-bigmen-discussion-guide-image_action_discussion_image_0.jpg
+Redirect 301 /pov/downloads/2014/pov-geniusofmarian-banker-and-pam-white.jpg http://www.pbs.org/pov/film-images/pov-geniusofmarian-banker-and-pam-white.jpg
+Redirect 301 /pov/downloads/2014/pov-olympia-discussion-guide-image.jpg http://www.pbs.org/pov/film-images/pov-olympia-discussion-guide-image.jpg
+Redirect 301 /pov/downloads/2014/pov-theactofkilling-discussion-guide-thumbnail.jpg http://www.pbs.org/pov/film-images/pov-theactofkilling-discussion-guide-thumbnail_action_discussion_image_0.jpg
+
+Redirect 301 /pov/thisismyfamily http://www.pbs.org/pov/adoption/myfamily.php
+Redirect 301 /pov/thisismyfamily_promo.php http://www.pbs.org/pov/adoption/thisismyfamily_promo.php
+
+Redirect 301 /pov/ad http://www.pbs.org/pov/takingonthekennedys/taking_on_the_kennedys_dissect.php
+Redirect 301 /pov/ad/ads/toolkit_list.html http://www.pbs.org/pov/takingonthekennedys/taking_on_the_kennedys_dissect.php
+Redirect 301 /pov/ad/ads/toolkit_menu.html http://www.pbs.org/pov/takingonthekennedys/taking_on_the_kennedys_dissect.php
+Redirect 301 /pov/ad/ads/toolkit_text.html http://www.pbs.org/pov/takingonthekennedys/taking_on_the_kennedys_dissect.php
+
+Redirect 301 /pov/popindex http://www.pbs.org/pov/thesweetestsound/popularityindex.php
+
+#bad blog links
+Redirect 301 /pov/blog/documentarysite/2014/06/dear-mr-watterson-365docs/\xE2\x80\x8E http://www.pbs.org/pov/blog/documentarysite/2014/06/dear-mr-watterson-365docs/
+
+
+
+
+
+
+# utils
+Redirect 301 /pov/utils/aboutamerican.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_aufderheide.pdf http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_awards.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_critical.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_director.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_faq.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_history.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_history02.ahtml http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_history02.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_history02a.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_history03.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_history03_new.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_howto.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_new.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_resources.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/aboutpov_whatwedo.html http://www.pbs.org/pov/about
+Redirect 301 /pov/utils/callforentries.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/callforentries_dvp.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/dvp.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/dvp_films.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/forproducers-cfe.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/forproducers.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/forproducers_CFE_reminder.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/forproducers_cfe2006.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/forproducers_nocfe.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/forproducers_resources.html http://www.pbs.org/pov/filmmakers/
+Redirect 301 /pov/utils/youthviews.html http://www.pbs.org/pov/about/
+RedirectMatch 301 /pov/utils/youthviews http://www.pbs.org/pov/about/
+RedirectMatch 301 /pov/utils http://www.pbs.org/pov/about
+
+# utils - pressroom and pressroom photos
+RedirectMatch 301 /pov/utils/pressroom2000 http://www.amdoc.org/pressroom.php
+RedirectMatch 301 /pov/utils/pressroom2001 http://www.amdoc.org/pressroom.php
+RedirectMatch 301 /pov/utils/pressroom2002 http://www.amdoc.org/pressroom.php
+RedirectMatch 301 /pov/utils/pressroom2003 http://www.amdoc.org/pressroom.php
+RedirectMatch 301 /pov/utils/pressroom2004 http://www.amdoc.org/pressroom.php
+RedirectMatch 301 /pov/utils/pressroom http://www.amdoc.org/pressroom.php
+RedirectMatch 301 /pov/utils/press http://www.amdoc.org/pressroom.php

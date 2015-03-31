@@ -25,24 +25,24 @@ $lg: 1200px;
 // shadows
 
 @mixin shadow($z, $type){
-	@if $z == 0 {
-		#{$type}-shadow: none;
-	}
-	@else if $z == 1 {
-		#{$type}-shadow: 0 1px 6px rgba(0,0,0,.12),0 1px 6px rgba(0,0,0,.12);
-	}
-	@else if $z == 2 {
-		#{$type}-shadow: 0 3px 10px rgba(0,0,0,.23),0 3px 10px rgba(0,0,0,.16);
-	}
-	@else if $z == 3 {
-		#{$type}-shadow: 0 6px 10px rgba(0,0,0,.23),0 10px 30px rgba(0,0,0,.19);
-	}
-	@else if $z == 4 {
-		#{$type}-shadow: 0 10px 18px rgba(0,0,0,.22),0 14px 45px rgba(0,0,0,.25);
-	}
-	@else if $z == 5 {
-		#{$type}-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-	}
+  @if $z == 0 {
+    #{$type}-shadow: none;
+  }
+  @else if $z == 1 {
+    #{$type}-shadow: 0 1px 6px rgba(0,0,0,.12),0 1px 6px rgba(0,0,0,.12);
+  }
+  @else if $z == 2 {
+    #{$type}-shadow: 0 3px 10px rgba(0,0,0,.23),0 3px 10px rgba(0,0,0,.16);
+  }
+  @else if $z == 3 {
+    #{$type}-shadow: 0 6px 10px rgba(0,0,0,.23),0 10px 30px rgba(0,0,0,.19);
+  }
+  @else if $z == 4 {
+    #{$type}-shadow: 0 10px 18px rgba(0,0,0,.22),0 14px 45px rgba(0,0,0,.25);
+  }
+  @else if $z == 5 {
+    #{$type}-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+  }
 }
 
 // 
@@ -66,25 +66,25 @@ $lg: 1200px;
 // Font Selections
 
 @mixin vertical-line($color){
-	&::before {
-		content: '';
-		position: absolute;
-		left: 32px;
-		top: 0px;
-		height: 100%;
-		width: 4px;
-		background-color: darken($color, 20%);
-		z-index: 1;
-	}
+  &::before {
+    content: '';
+    position: absolute;
+    left: 32px;
+    top: 0px;
+    height: 100%;
+    width: 4px;
+    background-color: darken($color, 20%);
+    z-index: 1;
+  }
 }
 
 @mixin body-font() {
-	font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 @mixin heading-font() {
   font-family: "Roboto Slab", "Roboto", sans-serif;
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 @mixin css3($property, $value){
@@ -97,11 +97,11 @@ $lg: 1200px;
 
 
 @mixin transition($value){
-	@include css3(transition, $value);
+  @include css3(transition, $value);
 }
 
 @mixin background-cover() {
-	@include css3(background-size, cover);
+  @include css3(background-size, cover);
 }
 
 

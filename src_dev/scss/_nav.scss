@@ -1,127 +1,127 @@
 .main-navbar{
-	background-color: rgba(0,0,0,0.6);
-	z-index: 100;
-	min-height: 50px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	margin-top: -70px;
-	@include transition(all 0.3s ease-in-out);
-	@include shadow(2, box);
-	
-	&.show{
-		margin-top: 0px;
-	}
+  background-color: rgba(0,0,0,0.6);
+  z-index: 100;
+  min-height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: -70px;
+  @include transition(all 0.3s ease-in-out);
+  @include shadow(2, box);
+  
+  &.show{
+    margin-top: 0px;
+  }
 
-	.container{
-		@include display(flex);
-		@include flex-direction(column);
-		@include justify-content(flex-start);
-	}
+  .container{
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(flex-start);
+  }
 
-	.brand-header{
-		@include display(flex);
-		@include flex-direction(row);
-		@include justify-content(flex-start);
-	
-		.hamburger {
-	    width: 50px;
-	    height: 50px;
-	    label{
-	      position: relative;
-	      display: block;
-	      height: 100%;
-	      cursor: pointer;
-	      padding: 0px 15px;
-			  margin-bottom: 0;
-			  margin-top: -5px;
-	    }
+  .brand-header{
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+  
+    .hamburger {
+      width: 50px;
+      height: 50px;
+      label{
+        position: relative;
+        display: block;
+        height: 100%;
+        cursor: pointer;
+        padding: 0px 15px;
+        margin-bottom: 0;
+        margin-top: -5px;
+      }
 
-	    span,
-	    span:before,
-	    span:after{
-	      content: "";
-	      position: absolute;
-	      width: 20px;
-	      height: 3px;
-	      background: #fff;
-	      @include transform(translate3d(0,0,0));
-	      @include transition-timing-function(cubic-bezier(0.55,0,0.1,1));
-	      @include transition-property(margin,transform,background-color);
-	    }
+      span,
+      span:before,
+      span:after{
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 3px;
+        background: #fff;
+        @include transform(translate3d(0,0,0));
+        @include transition-timing-function(cubic-bezier(0.55,0,0.1,1));
+        @include transition-property(margin,transform,background-color);
+      }
 
-	    span{
-	      @include transition-duration(0,0,0.5s);
-	      @include transition-delay(.2s,0,0);
-	      @include transform(translate3d(0%,50%,0));
-	      top: 50%;
-	    }
+      span{
+        @include transition-duration(0,0,0.5s);
+        @include transition-delay(.2s,0,0);
+        @include transform(translate3d(0%,50%,0));
+        top: 50%;
+      }
 
-	    span:before,
-	    span:after {
-	      @include transition-duration(.2s,0.2s,0.5s);
-	      @include transition-delay(.2s,0,0);
-	      left: 0;
-	    }
-	    span:before {
-	      margin-top: -8px;
-	    }
+      span:before,
+      span:after {
+        @include transition-duration(.2s,0.2s,0.5s);
+        @include transition-delay(.2s,0,0);
+        left: 0;
+      }
+      span:before {
+        margin-top: -8px;
+      }
 
-	    span:after {
-	      margin-top: 8px;
-	    }
-	  }
+      span:after {
+        margin-top: 8px;
+      }
+    }
 
-	  .brand{
-	  	flex: 1 0 auto;
-	  	margin-left: -50px;
-	  	text-align: center;
-	  	a{
-	  		display: inline-block;
-	  	}
-	  	img{
-		  	height: 50px;
-		  }
-	  }
-	}
+    .brand{
+      flex: 1 0 auto;
+      margin-left: -50px;
+      text-align: center;
+      a{
+        display: inline-block;
+      }
+      img{
+        height: 50px;
+      }
+    }
+  }
   .nav{
-		@include transition(margin-top 0.5s ease-in-out);
-		opacity: 0;
-		margin-top: -100%;
+    @include transition(margin-top 0.5s ease-in-out);
+    opacity: 0;
+    margin-top: -100%;
   }
 }
 
 .disabled-onepage-scroll{
-	.main-navbar{
-		@include transition(none);
-		margin-top: 0;
-	}
+  .main-navbar{
+    @include transition(none);
+    margin-top: 0;
+  }
 }
 #menu-toggle{
-	&:checked + .main-navbar{
-		.hamburger{
-		  span {
-		    background-color: transparent !important;
-		    @include transition-delay(.2s,0.2s,0);
-		  }
-		  span:before {
-		    margin-top: 0;
-		    @include transform(rotate(45deg));
-		    @include transition-delay(0,0.2s);
-		  }
-		  span:after{
-		    margin-top: 0;
-		    @include transform(rotate(-45deg));
-		    @include transition-delay(0,0.2s);
-		  }
-		}
+  &:checked + .main-navbar{
+    .hamburger{
+      span {
+        background-color: transparent !important;
+        @include transition-delay(.2s,0.2s,0);
+      }
+      span:before {
+        margin-top: 0;
+        @include transform(rotate(45deg));
+        @include transition-delay(0,0.2s);
+      }
+      span:after{
+        margin-top: 0;
+        @include transform(rotate(-45deg));
+        @include transition-delay(0,0.2s);
+      }
+    }
 
-		.nav{
-			opacity: 1;
-			margin-top: 0;
-		}
-	}
+    .nav{
+      opacity: 1;
+      margin-top: 0;
+    }
+  }
 }
 
 .pov-nav{
@@ -131,65 +131,65 @@
   display: -webkit-flex;
   display: flex;
   @include css3(flex-flow, column nowrap);
-	justify-content: flex-end;
-	width: 100%;
+  justify-content: flex-end;
+  width: 100%;
   @include transition(all 0.3s ease-in-out);
   list-style: none;
   margin: 0;
   padding: 0;
 
-	li{
-		margin: 0;
-		padding: 0;
-		flex-grow: 1;
-		text-align: center;
+  li{
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    text-align: center;
 
-		a{
-			text-decoration: none;
-			@include body-font();
-			font-size: 18px;
-			font-weight: normal;
-			position: relative;
+    a{
+      text-decoration: none;
+      @include body-font();
+      font-size: 18px;
+      font-weight: normal;
+      position: relative;
 
-			&:visited,
-			&:focus,
-			&:hover,
-			&:active{
-				background-color: transparent;
-			}
-		}
-		&.active a{
-			background-color: #ffc107;
-			color: #333;
-		}
-	}
+      &:visited,
+      &:focus,
+      &:hover,
+      &:active{
+        background-color: transparent;
+      }
+    }
+    &.active a{
+      background-color: #ffc107;
+      color: #333;
+    }
+  }
 }
 
 @include MQ(sm){
-	.main-navbar{
-		.container{
-			@include flex-direction(row);
-		}
-		.brand-header{
-			flex: 1 0 auto;
-			.hamburger{
-				display: none;
-			}
-			.brand{
-	  		flex: initial;
-				margin-left: 0;
-			}
-		}
-		.nav{
-			opacity: 1;
-			margin-top: 0;
-		}
-	}
-	.pov-nav{
+  .main-navbar{
+    .container{
+      @include flex-direction(row);
+    }
+    .brand-header{
+      flex: 1 0 auto;
+      .hamburger{
+        display: none;
+      }
+      .brand{
+        flex: initial;
+        margin-left: 0;
+      }
+    }
+    .nav{
+      opacity: 1;
+      margin-top: 0;
+    }
+  }
+  .pov-nav{
   @include css3(flex-flow, row nowrap);
-	}
+  }
 }
 .pov-nav#page-nav a{
-	display: block;
-	padding: 10px 0px;
+  display: block;
+  padding: 10px 0px;
 }

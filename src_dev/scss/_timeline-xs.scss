@@ -1,294 +1,294 @@
 .wrapper{
-	width: 100%;
-	height: 100%;
-	margin: 0 auto; 
-	overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto; 
+  overflow: hidden;
 }
 
 /* Overwirte the onepage pagination */
 .onepage-pagination{
-	display: none;
+  display: none;
 }
 
 .sections{
-	height: 100%;
-	width: 100%;
-	float: left;
-	margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  float: left;
+  margin: 0 auto;
 
-	.section{
-		position: relative;
-		height: initial;
-		/*border-bottom: dashed 1px;*/
-		background-repeat: no-repeat;
-		background-position: 50% 50%;
-		background-color: $bg-dark-odd;
-		content: $text-light-odd;
-		@include background-cover();
+  .section{
+    position: relative;
+    height: initial;
+    /*border-bottom: dashed 1px;*/
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: $bg-dark-odd;
+    content: $text-light-odd;
+    @include background-cover();
 
-		&:nth-child(even){
-		}
+    &:nth-child(even){
+    }
 
-		&.point,
-		&.main-point{
-			.vertical-line{
-				position: absolute;
-				left: 32px;
-				top: 0px;
-				height: 100%;
-				width: 4px;
-				background-color: darken($vertical-line-odd, 20%);
-				z-index: 1;
-				@include shadow(2, box);
-			}
+    &.point,
+    &.main-point{
+      .vertical-line{
+        position: absolute;
+        left: 32px;
+        top: 0px;
+        height: 100%;
+        width: 4px;
+        background-color: darken($vertical-line-odd, 20%);
+        z-index: 1;
+        @include shadow(2, box);
+      }
 
-			.overlay{
-				width: 100%;
-				position: relative;
-			}
-			.point-mark{
-				display: inline-block;
-				border-radius: 50%;
-				position: absolute;
-				top: 75px;
-				left: 8px;
-				z-index: 2;
+      .overlay{
+        width: 100%;
+        position: relative;
+      }
+      .point-mark{
+        display: inline-block;
+        border-radius: 50%;
+        position: absolute;
+        top: 75px;
+        left: 8px;
+        z-index: 2;
 
-				> div{
-					font-size: 95%;
-					width: 50px;
-					height: 50px;
-					border-radius: 50%;
-					background-color: $point-mark-bg;
-					color: $text-dark-odd;
-					@include body-font();
-					@include shadow(2, box);
-				  @include display(flex);
-				  @include flex-direction(row);
-				  @include justify-content(center);
-					@include align-items(center);
-					@include transition(all .1s ease-in-out);
-				}
-			}
-		}
-		&.main-point{
-			background-image: none;
-			height: 100%;
-			.overlay{
-				height: 100%;
-				padding: 90px 35px 35px;
-				background-color: rgba(0,0,0,0.2);
-			  @include display(flex);
-			  @include flex-direction(column);
-			  @include justify-content(center);
-				@include align-items(center);
-			}
-			.point-mark{
-				position: initial;
-				order: 1;
-				div{
-					font-size: 125%;
-					@include size(100px);
-				}
-			}
-			.title{
-				@include heading-font();
-				font-size: 150%;
-				color: #fff;
-				text-align: center;
-				margin: 0 auto;
-				padding: 30px 0px;
-				order: 2;
-				z-index: 2;
-			}
-		}
-		&.point{
-			.point-mark{
-				div{
-					font-weight: bold;
-				}
-			}
-		}
-		&.point:nth-child(odd){
-			background-color: $bg-light-odd;
-		}
-		
-		.half{
-		  width: 100%;
-		  img{
-		  	width: 100%;
-		  }
-		  > div:nth-child(odd){
-		  	display: none;
-		  	background-color: lighten($bg-dark-odd, 15%);
-		  }
-		  > div:nth-child(even){
-		  	padding: 65px 25px 65px 60px;
-		  }
-		}
+        > div{
+          font-size: 95%;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: $point-mark-bg;
+          color: $text-dark-odd;
+          @include body-font();
+          @include shadow(2, box);
+          @include display(flex);
+          @include flex-direction(row);
+          @include justify-content(center);
+          @include align-items(center);
+          @include transition(all .1s ease-in-out);
+        }
+      }
+    }
+    &.main-point{
+      background-image: none;
+      height: 100%;
+      .overlay{
+        height: 100%;
+        padding: 90px 35px 35px;
+        background-color: rgba(0,0,0,0.2);
+        @include display(flex);
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+      }
+      .point-mark{
+        position: initial;
+        order: 1;
+        div{
+          font-size: 125%;
+          @include size(100px);
+        }
+      }
+      .title{
+        @include heading-font();
+        font-size: 150%;
+        color: #fff;
+        text-align: center;
+        margin: 0 auto;
+        padding: 30px 0px;
+        order: 2;
+        z-index: 2;
+      }
+    }
+    &.point{
+      .point-mark{
+        div{
+          font-weight: bold;
+        }
+      }
+    }
+    &.point:nth-child(odd){
+      background-color: $bg-light-odd;
+    }
+    
+    .half{
+      width: 100%;
+      img{
+        width: 100%;
+      }
+      > div:nth-child(odd){
+        display: none;
+        background-color: lighten($bg-dark-odd, 15%);
+      }
+      > div:nth-child(even){
+        padding: 65px 25px 65px 60px;
+      }
+    }
 
-		.info{
-			text-align: center;
-			h3.title{
-				@include heading-font();
-				font-size: 140%;
-				margin: 0 auto 20px;
-				padding: 0;
-			}
-			.desc{
-				@include body-font();
-				font-size: 125%;
-				margin-bottom: 10px;
-				padding: 0px;
-				@include transition(all .1s ease-in-out);
-			}
-			.media{
-				.image{
-					img{
-						max-height: 90%;
-						max-width: 90%;
-						width: initial;
-					}
-				}
+    .info{
+      text-align: center;
+      h3.title{
+        @include heading-font();
+        font-size: 140%;
+        margin: 0 auto 20px;
+        padding: 0;
+      }
+      .desc{
+        @include body-font();
+        font-size: 125%;
+        margin-bottom: 10px;
+        padding: 0px;
+        @include transition(all .1s ease-in-out);
+      }
+      .media{
+        .image{
+          img{
+            max-height: 90%;
+            max-width: 90%;
+            width: initial;
+          }
+        }
 
-				.modal-link{
-					display: none;
-					&.video{
-						position: relative;
-						cursor: pointer;
-						outline: none;
-						img {
-							display: block;
-						}
-						&:after, &:before {
-							content: "";
-							position: absolute;
-							top: 50%;
-							left: 50%;
-							@include transition(all .1s ease-in-out);
-						}
-						&:before {
-							width: 60px;
-							height: 60px;
-							margin: (-60px/2) 0 0 (-60px/2);
-							border: 3px solid #fff;
-							border-radius: 50%;
-							background: rgba(#000, 0.42);
-							@include shadow(2, box);
-						}
-						&:after {
-							border: 15px solid transparent;
-							border-left: 18px solid #fff;
-							margin-top: -15px;
-							margin-left: -6px;
-							@include shadow(2, box);
-						}
-						&:hover {
-							&:after, &:before {
-								@include css3(transform, scale(1.03, 1.03));
-							}
-							&:before {
-								background: rgba(#000, 0.7);
-							}
-						}
-					}
-				}
-			}
-		}
+        .modal-link{
+          display: none;
+          &.video{
+            position: relative;
+            cursor: pointer;
+            outline: none;
+            img {
+              display: block;
+            }
+            &:after, &:before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              @include transition(all .1s ease-in-out);
+            }
+            &:before {
+              width: 60px;
+              height: 60px;
+              margin: (-60px/2) 0 0 (-60px/2);
+              border: 3px solid #fff;
+              border-radius: 50%;
+              background: rgba(#000, 0.42);
+              @include shadow(2, box);
+            }
+            &:after {
+              border: 15px solid transparent;
+              border-left: 18px solid #fff;
+              margin-top: -15px;
+              margin-left: -6px;
+              @include shadow(2, box);
+            }
+            &:hover {
+              &:after, &:before {
+                @include css3(transform, scale(1.03, 1.03));
+              }
+              &:before {
+                background: rgba(#000, 0.7);
+              }
+            }
+          }
+        }
+      }
+    }
 
-		.quotes{
-			text-align: center;
-			@include transition(all .3s ease-in-out);
-		  @include display(flex);
-		  @include flex-direction(row);
-			@include flex-wrap(wrap);
+    .quotes{
+      text-align: center;
+      @include transition(all .3s ease-in-out);
+      @include display(flex);
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
 
-			.quote{
-				font-size: 125%;
-				margin: 0px 0px 20px 0px;
-				padding: 0;
-				order: 1;
-				flex: 1 100%;
+      .quote{
+        font-size: 125%;
+        margin: 0px 0px 20px 0px;
+        padding: 0;
+        order: 1;
+        flex: 1 100%;
 
-				&::before,
-				&::after{
-				  color: #fff;
-				  font-size: 300%;
-				  line-height: 10%;
-				}
+        &::before,
+        &::after{
+          color: #fff;
+          font-size: 300%;
+          line-height: 10%;
+        }
 
-				&::before{
-				  content: open-quote;
-				  margin-right: 0.20em;
-				  vertical-align: -0.3em;
-				}
-				&::after{
-				  content: close-quote;
-				  margin-left: 0.20em;
-				  vertical-align: -0.6em;
-				}
-			}
-			.author-img{
-				width: 75px;
-				height: 75px;
-				order: 2;
-				flex: 1 0 25%;
-				align-self: center;
-					border-radius: 50%;
+        &::before{
+          content: open-quote;
+          margin-right: 0.20em;
+          vertical-align: -0.3em;
+        }
+        &::after{
+          content: close-quote;
+          margin-left: 0.20em;
+          vertical-align: -0.6em;
+        }
+      }
+      .author-img{
+        width: 75px;
+        height: 75px;
+        order: 2;
+        flex: 1 0 25%;
+        align-self: center;
+          border-radius: 50%;
 
-				img{
-					width: 75px;
-					height: 75px;
-					border-radius: 50%;
-					border: 2px solid #fff;
-					@include shadow(2, box);
-				}
-			}
-			.by-who{
-				font-size: 110%;
-				order: 2;
-				flex: 1 0 70%;
-				margin: 0px;
-				align-self: center;
-			}
-		}
+        img{
+          width: 75px;
+          height: 75px;
+          border-radius: 50%;
+          border: 2px solid #fff;
+          @include shadow(2, box);
+        }
+      }
+      .by-who{
+        font-size: 110%;
+        order: 2;
+        flex: 1 0 70%;
+        margin: 0px;
+        align-self: center;
+      }
+    }
 
-		/* Home page style */
-		&.time-home{
-			background-color: $time-home-bgd;
-			color: $time-home-txt;
-			.overlay{
-				background-color: rgba(0,0,0,0.5);
-				padding: 0px;
-			}
-			.logo{
-				width: 90%;
-				max-width: 1200px;
-				max-height: 500px;
-				margin: 0 auto;
-			}
-			#tagline{
-				font-size: 200%;
-				@include heading-font();
-				margin: 0;
-			}
-			#page-nav{
-				display: none;
-			}
-			&::before{
-				display: none;
-			}
-		}
-		/* 1986-1992 home page style */
-		&.time-8692{
-			/*@include time-default-style(8692, $time-8692-bgd, $time-8692-bgl, $time-8692-fgc, $time-8692-txt);*/
-		}
+    /* Home page style */
+    &.time-home{
+      background-color: $time-home-bgd;
+      color: $time-home-txt;
+      .overlay{
+        background-color: rgba(0,0,0,0.5);
+        padding: 0px;
+      }
+      .logo{
+        width: 90%;
+        max-width: 1200px;
+        max-height: 500px;
+        margin: 0 auto;
+      }
+      #tagline{
+        font-size: 200%;
+        @include heading-font();
+        margin: 0;
+      }
+      #page-nav{
+        display: none;
+      }
+      &::before{
+        display: none;
+      }
+    }
+    /* 1986-1992 home page style */
+    &.time-8692{
+      /*@include time-default-style(8692, $time-8692-bgd, $time-8692-bgl, $time-8692-fgc, $time-8692-txt);*/
+    }
 
-		/* 1993-1998 home page style */
-		&.time-9398{
-			/*@include time-default-style(9398, $time-9398-bgd, $time-9398-bgl, $time-9398-fgc, $time-9398-txt);*/
-		}
-	}
+    /* 1993-1998 home page style */
+    &.time-9398{
+      /*@include time-default-style(9398, $time-9398-bgd, $time-9398-bgl, $time-9398-fgc, $time-9398-txt);*/
+    }
+  }
 }
 
 .onepage-pagination {
@@ -301,47 +301,47 @@
   padding: 0;
   @include transform(translateY(-50%));
 
-	li {
-	  padding: 0;
-	  margin: 0;
-	  text-align: center;
-	  a{
-		  padding: 0;
-		  margin: 0;
-		  width: 30px;
-		  height: 20px;
-		  display: block;
-		  position: relative;
+  li {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    a{
+      padding: 0;
+      margin: 0;
+      width: 30px;
+      height: 20px;
+      display: block;
+      position: relative;
 
-		  &:before{
-			  padding: 0;
-			  margin: 0;
-			  content: '';
-			  position: absolute;
-			  @include size(6px);
-			  top: 50%;
-			  left: 50%;
-			  background: transparent;
-			  border: 3px solid rgba(255,255,255,0.85);
-			  @include css3(border-radius, 50%);
-			  @include transition(all 0.5s ease-in-out);
-  			@include transform(translate3d(-50%, -50%, 0));
-			}
-			&:hover:before{
-			  @include size(10px);
-			  @include transition(all 0.3s ease-in-out);
-			}
-			&.active:before{
-			  padding: 0;
-			  margin: 0;
-			  margin-top: 0px;
-			  top: 50%;
-			  left: 50%;
-			  @include size(20px);
-			  border: 2px solid #fff;
-			  @include transition(all 0.7s ease-in-out);
-			}
-		  
-		}
-	}
+      &:before{
+        padding: 0;
+        margin: 0;
+        content: '';
+        position: absolute;
+        @include size(6px);
+        top: 50%;
+        left: 50%;
+        background: transparent;
+        border: 3px solid rgba(255,255,255,0.85);
+        @include css3(border-radius, 50%);
+        @include transition(all 0.5s ease-in-out);
+        @include transform(translate3d(-50%, -50%, 0));
+      }
+      &:hover:before{
+        @include size(10px);
+        @include transition(all 0.3s ease-in-out);
+      }
+      &.active:before{
+        padding: 0;
+        margin: 0;
+        margin-top: 0px;
+        top: 50%;
+        left: 50%;
+        @include size(20px);
+        border: 2px solid #fff;
+        @include transition(all 0.7s ease-in-out);
+      }
+      
+    }
+  }
 }
