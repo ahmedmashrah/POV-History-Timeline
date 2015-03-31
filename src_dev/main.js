@@ -3,11 +3,9 @@ function show_nav(index) {
     hash > 1 ? $("#main-navbar").addClass("show") : $("#main-navbar").removeClass("show");
 }
 
-function page_scroll() {
-    for (var links = $("body").find(".page-scroll"), i = 0; i < links.length; i++) {
-        var link = links[i], index = link.attributes.href.value.replace(/^#/, "");
-        $(links[i]).attr("data-index", index);
-    }
+function show_footer(index) {
+    var hash = void 0 != index ? index : parseInt(window.location.hash.replace(/^#/, "")), count = $("#pov-timeline").children().length;
+    hash >= count ? $("#footer").addClass("show") : $("#footer").removeClass("show");
 }
 
 function json_to_css(el, style) {
@@ -20,12 +18,7 @@ function buildTimeline() {
     var content = "", menu = "", count = 1, section = "", sub_sections = "", sub_section = "", css_style = "";
     $.getJSON("timeline.json", function(result) {
         if (result.sections.length > 0) {
-            var wrapper = $("#wrapper"), main = document.createElement("main");
-            $(main).attr({
-                id: "pov-timeline",
-                "class": "sections"
-            }).appendTo(wrapper);
-            var home = document.createElement("section");
+            var main = $("#pov-timeline"), home = document.createElement("section");
             $(home).attr({
                 id: result.id,
                 "data-index": count++,
@@ -81,10 +74,11 @@ function buildTimeline() {
                     $(sub_point_line).attr({
                         "class": "vertical-line"
                     }).appendTo(sub_point);
-                    var sub_point_overlay = document.createElement("div");
+                    var sub_point_overlay = document.createElement("div"), href = "";
+                    href = b + 1 >= sub_sections.length ? a + 1 < result.sections.length ? result.sections[a + 1].id : section.id : section.id + "-" + (b + 2), 
                     $(sub_point_overlay).attr({
                         "class": "overlay"
-                    }).html('<a href="#' + section.id + "-" + (b + 2) + '" data-index="' + ++count + '" class="page-scroll point-mark"><div class="ripple">' + sub_section.year + '</div></a><div class="half"><div class="cover-bg"></div><div>' + content + "</div></div>").appendTo(sub_point), 
+                    }).html('<a href="#' + href + '" data-index="' + ++count + '" class="page-scroll point-mark"><div class="ripple">' + sub_section.year + '</div></a><div class="half"><div class="cover-bg"></div><div>' + content + "</div></div>").appendTo(sub_point), 
                     css_style += json_to_css(".sections .section#" + section.id + "-" + (b + 1) + " .half .cover-bg", {
                         "background-image": "url('" + sub_section.bg_img + "')"
                     });
@@ -102,10 +96,10 @@ function buildTimeline() {
                 loop: !1,
                 updateURL: !0,
                 beforeMove: function(page_index) {
-                    show_nav(page_index);
+                    show_nav(page_index), show_footer(page_index);
                 },
                 afterMove: function(page_index) {
-                    show_nav(page_index);
+                    show_nav(page_index), show_footer(page_index);
                 }
             });
         }
@@ -138,9 +132,7 @@ function buildTimeline() {
         }, 1500, "easeInOutExpo", function() {
             window.location.hash = page_index;
         })) : (event.preventDefault(), window.location.hash = page_index, $(".sections").moveTo(page_index));
-    }), buildTimeline(), show_nav(), $(document).on("mousewheel DOMMouseScroll MozMousePixelScroll", function() {
-        show_nav();
-    }), $("body").scrollspy({
+    }), buildTimeline(), show_nav(), $("body").scrollspy({
         target: "#main-navbar"
     }), $(".navbar-collapse ul li a").click(function() {
         $(".navbar-toggle:visible").click();

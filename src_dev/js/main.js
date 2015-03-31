@@ -22,7 +22,11 @@ $(function() {
 	buildTimeline();
 	show_nav();
 
-	$(document).on('mousewheel DOMMouseScroll MozMousePixelScroll', function(){show_nav();});
+	// when user is scrolling do some work
+	// $(window).on('scroll',function(){
+	// 	var scroll = $(this).scrollTop();
+	// 	console.log(scroll);
+	// });
 
 
 	// Highlight the nav as scrolling occurs

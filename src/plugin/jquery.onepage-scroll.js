@@ -184,7 +184,7 @@
       $("body").addClass("viewing-page-"+next.data("index"))
 
       if (history.replaceState && settings.updateURL == true) {
-        var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (index);
+        var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (index - 1);
         history.pushState( {}, document.title, href );
       }
       el.transformPage(settings, pos, next.data("index"));

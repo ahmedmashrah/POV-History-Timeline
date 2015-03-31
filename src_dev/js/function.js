@@ -40,15 +40,16 @@ function show_nav (index) {
   }
 }
 
-// add data-index to all page-scroll
-function page_scroll () {
-  var links = $('body').find('.page-scroll');
-  for (var i = 0; i < links.length; i++) {
-    var link = links[i];
-    var index = link.attributes['href']['value'].replace(/^#/, '');
-    $(links[i]).attr('data-index', index);
-  };
+function show_footer (index){
+  var hash = (index!=undefined) ? index : parseInt(window.location.hash.replace(/^#/, ''));
+  var count = $('#pov-timeline').children().length;
+  if(hash>=count){
+    $('#footer').addClass('show');
+  }else{
+    $('#footer').removeClass('show');
+  }
 }
+
 
 function json_to_css(el, style){
   var css = '';
@@ -75,13 +76,7 @@ function buildTimeline () {
   $.getJSON('timeline.json', function(result){
     if(result.sections.length>0){
 
-      var wrapper = $('#wrapper');
-
-      var main = document.createElement('main');
-      $(main).attr({
-        'id': 'pov-timeline',
-        'class': 'sections'
-      }).appendTo(wrapper);
+      var main = $('#pov-timeline');
 
       var home = document.createElement('section');
       $(home)
@@ -203,10 +198,16 @@ function buildTimeline () {
           ;
 
           var sub_point_overlay = document.createElement('div');
+          var href = '';
+          if((b+1)>=sub_sections.length){
+            href = (a+1<result.sections.length) ? result.sections[a+1].id : section.id;
+          }else{
+            href = section.id+'-'+(b+2);
+          }
           $(sub_point_overlay)
             .attr({'class': 'overlay'})
             .html(
-              '<a href="#'+section.id+'-'+(b+2)+'" data-index="'+(++count)+'" class="page-scroll point-mark">'+
+              '<a href="#'+href+'" data-index="'+(++count)+'" class="page-scroll point-mark">'+
                 '<div class="ripple">'+sub_section.year+'</div>'+
               '</a>'+
               '<div class="half">'+
@@ -234,9 +235,11 @@ function buildTimeline () {
         updateURL: true,
         beforeMove: function(page_index){
           show_nav(page_index);
+          show_footer(page_index);
         },
         afterMove: function(page_index){
           show_nav(page_index);
+          show_footer(page_index);
         }
       });
     }

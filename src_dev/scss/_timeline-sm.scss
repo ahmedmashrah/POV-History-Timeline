@@ -10,6 +10,10 @@
     .section{
       height: 100%;
 
+      &:last-child{
+        margin-bottom: 0px;
+      }
+
       &.point,
       &.main-point{
         .overlay{
@@ -87,6 +91,16 @@
           display: flex;
         }
       }
+    }
+  }
+  .footer{
+    span.copyright{
+      a{
+        text-decoration: none;
+      }
+    }
+    ul.social-buttons {
+      display: block;
     }
   }
 }
