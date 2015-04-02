@@ -23,10 +23,19 @@ $(function() {
 	show_nav();
 
 	// when user is scrolling do some work
-	// $(window).on('scroll',function(){
-	// 	var scroll = $(this).scrollTop();
-	// 	console.log(scroll);
-	// });
+	$('#wrapper').on('scroll',function(){
+		if($('body.disabled-onepage-scroll').length!=0){
+			var scroll = $(this).scrollTop();
+			var scrollHeight = $('#pov-timeline').prop('scrollHeight') - $(this).height();
+			if((scroll+85)>scrollHeight){
+				$('#footer').addClass('show');
+			}else{
+				$('#footer').removeClass('show');
+			}
+		}
+	});
+
+
 
 
 	// Highlight the nav as scrolling occurs

@@ -132,7 +132,12 @@ function buildTimeline() {
         }, 1500, "easeInOutExpo", function() {
             window.location.hash = page_index;
         })) : (event.preventDefault(), window.location.hash = page_index, $(".sections").moveTo(page_index));
-    }), buildTimeline(), show_nav(), $("body").scrollspy({
+    }), buildTimeline(), show_nav(), $("#wrapper").on("scroll", function() {
+        if (0 != $("body.disabled-onepage-scroll").length) {
+            var scroll = $(this).scrollTop(), scrollHeight = $("#pov-timeline").prop("scrollHeight") - $(this).height();
+            scroll + 85 > scrollHeight ? $("#footer").addClass("show") : $("#footer").removeClass("show");
+        }
+    }), $("body").scrollspy({
         target: "#main-navbar"
     }), $(".navbar-collapse ul li a").click(function() {
         $(".navbar-toggle:visible").click();
